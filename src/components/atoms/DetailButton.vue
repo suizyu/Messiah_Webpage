@@ -1,7 +1,7 @@
 <template>
-    <a href="https://uxdaystokyo.com/articles/glossary/atomic-design/" target="_blank" class="detail-btn">
+    <nuxt-link to="../../pages/index.vue" target="_blank" class="detail-btn">
         <span class="btn-text">More</span>
-    </a>
+    </nuxt-link>
 </template>
 
 <style>
@@ -47,6 +47,7 @@
 
     .btn-text:hover {
         color: #fff;
+        transition: .2s;
     }
 
     .btn-text:hover::before {
