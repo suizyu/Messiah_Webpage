@@ -7,10 +7,11 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
-    "storybook": "start-storybook -p 6006",
+    "sb": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
   "dependencies": {
+    "@storybook/addon-backgrounds": "^6.2.8",
     "core-js": "^3.9.1",
     "nuxt": "^2.15.3"
   },
