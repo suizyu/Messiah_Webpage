@@ -10,6 +10,9 @@
         bottom: 25vh;
         color: rgb(6, 4, 133);
         font-size: 0.7rem;
+        font-family: kinuta-maruminshinano-stdn, serif;
+        font-weight: 400;
+        font-style: normal;
         letter-spacing: 0.05em;
         -ms-writing-mode: tb-rl;
         -webkit-writing-mode: vertical-rl;
