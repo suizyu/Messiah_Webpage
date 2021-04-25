@@ -30,9 +30,10 @@
     }
 
     .menu-list li {
-        width: 140px;
+        display: block;
         text-align: center;
-        background-color: chartreuse;
         float: left;
+        width: 140px;
+        margin-right: 45px;
     }
 </style>

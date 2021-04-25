@@ -8,7 +8,7 @@
         position: absolute;
         left: 4px;
         bottom: 25vh;
-        color: rgb(6, 4, 133);
+        color: white;
         font-size: 0.7rem;
         font-family: kinuta-maruminshinano-stdn, serif;
         font-weight: 400;
@@ -32,7 +32,7 @@
         top: 0;
         width: 1px;
         height: 30px;
-        background: rgb(6, 4, 133);
+        background: white;
         animation: 
             pathmove 1.4s ease-in-out infinite,
             pathmovehide 1.4s ease-out infinite;
@@ -41,7 +41,7 @@
     @keyframes pathmove {
         0% {
             height: 0;
-            top: 0;
+            top: -15%;
         }
         30% {
             height:30%;
@@ -52,7 +52,7 @@
         }
     }
     @keyframes pathmovehide {
-        0%{opacity:0}
+        0%{opacity:0.8}
         50%{opacity:1;}
         80%{opacity:0.9;}
         100%{opacity:0;}

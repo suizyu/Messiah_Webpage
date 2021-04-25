@@ -6,44 +6,34 @@
 <script lang="ts">
 import Vue from 'vue'
 export default Vue.extend({
-    data() {
-        return {
-            linkName: ''
-        }
-    },
-    props: ['name', 'link'],
-    mounted() {
-        this.linkName = this.name;
-        console.log(this.linkName);
-        console.log(this.name);
-    }
+    props: ['name', 'link']
 })
 </script>
 <style>
     .menu-link {
-        display: block;
-        padding:10px 30px;
-        text-decoration: none;
+        display: inline-block;
         position: relative;
+        color: white;
+        font-size: 1.5rem;
+        width: 100%;
     }
-    .menu-link,
-    .menu-link:hover {
-        color:#0481A2;
-    }
+    
     .menu-link::after {
         content: '';
         position: absolute;
-        bottom: 0;
-        left: 5%;
-        width: 80%;
+        width: 100%;
+        transform: scaleX(0);
         height: 2px;
-        background:#0481A2;
-        transition: all .3s;
-        transform: scale(0, 1);
-        transform-origin: left top;
+        bottom: 0;
+        left: 0;
+        background-color: white;
+        transform-origin: bottom right;
+        transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
     }
+    
     .menu-link:hover::after {
-        transform: scale(1, 1);
+        transform: scaleX(1);
+        transform-origin: bottom left;
     }
-
+  
 </style>

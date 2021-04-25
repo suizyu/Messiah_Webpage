@@ -8,7 +8,7 @@ export default {
 const Template = (args: any, { argTypes }: any) => ({
     props: Object.keys(argTypes),
     components: { MenuLink },
-    template: `<MenuLink v-bind="$props" /> `
+    template: `<MenuLink v-bind="$props" />`
   })
 
 export const Primary = Template.bind({})
