@@ -6,7 +6,8 @@
 <style>
     .scroll-guide span {
         position: absolute;
-        left: 4px;
+        left: 2px;
+        top: 1px;
         bottom: 25vh;
         color: white;
         font-size: 0.7rem;
@@ -20,41 +21,48 @@
     }
 
     .scroll-guide {
+        display: inline-block;
         position: absolute;
         left:50%;
-        bottom:10px;
-        height: 35vh;
+        bottom: 0;
+        height: 38vh;
+    }
+
+    .scroll-guide::before {
+        content: '';
+        position: absolute;
+        width: 1px;
+        height: 38vh;
+        background: rgba(255, 255, 255, 0.281);
+
     }
 
     .scroll-guide::after {
         content: "";
         position: absolute;
-        top: 0;
+        bottom: 0;
         width: 1px;
-        height: 30px;
+        height: 38vh;
         background: white;
-        animation: 
-            pathmove 1.4s ease-in-out infinite,
-            pathmovehide 1.4s ease-out infinite;
+        animation: pathmove 2s cubic-bezier(1, 0, 0, 1) infinite;
     }
 
     @keyframes pathmove {
         0% {
-            height: 0;
-            top: -15%;
+            transform: scale(1, 0);
+            transform-origin: 0 0;
         }
-        30% {
-            height:30%;
+        35% {
+            transform: scale(1, 1);
+            transform-origin: 0 0;
         }
-        100%{
-            height: 0;
-            top:100%;
+        35.1% {
+            transform: scale(1, 1);
+            transform-origin: 0 100%;
         }
-    }
-    @keyframes pathmovehide {
-        0%{opacity:0.8}
-        50%{opacity:1;}
-        80%{opacity:0.9;}
-        100%{opacity:0;}
+        70%, 100% {
+            transform: scale(1, 0);
+            transform-origin: 0 100%;
+        }
     }
 </style>
