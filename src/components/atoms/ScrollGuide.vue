@@ -14,7 +14,7 @@
         font-family: kinuta-maruminshinano-stdn, serif;
         font-weight: 400;
         font-style: normal;
-        letter-spacing: 0.05em;
+        letter-spacing: 0.05rem;
         -ms-writing-mode: tb-rl;
         -webkit-writing-mode: vertical-rl;
         writing-mode: vertical-rl;
