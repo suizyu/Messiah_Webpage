@@ -1,10 +1,10 @@
 <script lang="ts">
 import Vue from 'vue'
-
 export default Vue.component('custom-heading',{
     render: function(createElement) {
         return createElement(
             'h' + this.level,
+            { class: "custom-h"  },
             [
                 this.$slots.default, 
                 this.decorate ?
@@ -29,23 +29,19 @@ export default Vue.component('custom-heading',{
             default: false,
             required: false
         }
-    },
-    data() {
-        return {
-            imagePath: require("../../assets/images/heading-border-pc.png")
-        }
     }
 })
 </script>
-<style>
+<style scoped>
     .border-decorate {
         display: block;
         position: inherit;
         height: 13vh;
         max-height: 45px;
     }
-    h1, h2, h3, h4, h5, h6 {
+    .custom-h {
         color: white;
+        font-family: classico-urw, sans-serif;
         text-align: center;
         position: relative;
     }
@@ -54,5 +50,4 @@ export default Vue.component('custom-heading',{
         position: absolute;
         bottom: 7px;
     }
-
 </style>

@@ -7,10 +7,9 @@
 </template>
 
 <script lang="ts">
-    import menus from '../../assets/menu.json';
-    export type Menus = typeof menus;
-    import MenuLink from '../atoms/MenuLink.vue';
-
+    import menus from '../../assets/menu.json'
+    export type Menus = typeof menus
+    import MenuLink from '../atoms/MenuLink.vue'
     export default {
         components: {
             MenuLink

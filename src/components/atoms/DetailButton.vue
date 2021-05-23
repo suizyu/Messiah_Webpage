@@ -3,16 +3,7 @@
         <span class="btn-text">More</span>
     </nuxt-link>
 </template>
-
-<style>
-    a {
-        display: block;
-        text-decoration: none;
-        font-family: classico-urw, sans-serif;
-        font-weight: 500;
-        font-style: normal;
-    }
-
+<style scoped>
     .detail-btn {
         position: relative;
         display: flex;
@@ -24,14 +15,13 @@
         width: 328px;
         line-height: 1;
     }
-
     .btn-text {
         width: 100%;
         height: 100%;
+        font-family: classico-urw, sans-serif;
         color: #b0a200;
         z-index: 2;
     }
-
     .btn-text:before {
         content: "";
         position: absolute;
@@ -44,12 +34,10 @@
         z-index: -1;
         transition: .3s;
     }
-
     .btn-text:hover {
         color: #fff;
         transition: .2s;
     }
-
     .btn-text:hover::before {
         width: 100%;
     }

@@ -3,7 +3,7 @@
         <span>SCROLL</span>
     </div>
 </template>
-<style>
+<style scoped>
     .scroll-guide span {
         position: absolute;
         left: 2px;
@@ -19,7 +19,6 @@
         -webkit-writing-mode: vertical-rl;
         writing-mode: vertical-rl;
     }
-
     .scroll-guide {
         display: inline-block;
         position: absolute;
@@ -27,16 +26,13 @@
         bottom: 0;
         height: 38vh;
     }
-
     .scroll-guide::before {
         content: '';
         position: absolute;
         width: 1px;
         height: 38vh;
         background: rgba(255, 255, 255, 0.281);
-
     }
-
     .scroll-guide::after {
         content: "";
         position: absolute;
@@ -46,7 +42,6 @@
         background: white;
         animation: pathmove 2s cubic-bezier(1, 0, 0, 1) infinite;
     }
-
     @keyframes pathmove {
         0% {
             transform: scale(1, 0);

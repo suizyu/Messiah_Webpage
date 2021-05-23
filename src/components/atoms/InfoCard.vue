@@ -28,17 +28,20 @@ export default Vue.extend({
     }
 })
 </script>
-<style>
+<style scoped>
     .info  {
         background-color: white;
         padding: 5px 10px;
         height: 55px;
     }
+    a.card {
+        display: block;
+        text-decoration: none;
+    }
     .card {
         width: 300px;
         transition:0.5s all;
     }
-
     .card p, .date {
         color: #3C3F4D;
         text-align: left;
@@ -53,14 +56,12 @@ export default Vue.extend({
         overflow: hidden;
         background-color: grey;
     }
-
     .thumbnailImg {
         position: absolute;
         height: 100%;
         bottom: 0;
         transition: all 0.5s;
     }
-
     .card:hover .thumbnailImg {
         transform: scale(1.5, 1.5);
         transition: 0.5s all;

@@ -5,10 +5,8 @@
         <span></span>
     </div>
 </template>
-
 <script lang="ts">
 import Vue from 'vue'
-
 export default Vue.extend({
     data () {
         return {
@@ -20,8 +18,7 @@ export default Vue.extend({
     }
 })
 </script>
-
-<style>
+<style scoped>
     .hmg-btn {
         position: relative;
         width: 50px;
@@ -50,19 +47,14 @@ export default Vue.extend({
     .hmg-btn span:nth-of-type(3) {
         bottom: 0;
     }
-
     /* 変化アニメーション */
     .hmg-btn.active span:nth-of-type(1) {
-        -webkit-transform: translateY(20px) rotate(45deg);
         transform: translateY(20px) rotate(45deg);
     }
-
     .hmg-btn.active span:nth-of-type(2) {
         opacity: 0;
     }
-
     .hmg-btn.active span:nth-of-type(3) {
-        -webkit-transform: translateY(-20px) rotate(-45deg);
         transform: translateY(-20px) rotate(-45deg);
     }
 </style>

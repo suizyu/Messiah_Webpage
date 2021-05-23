@@ -9,15 +9,15 @@ export default Vue.extend({
     props: ['name', 'link']
 })
 </script>
-<style>
+<style scoped>
     .menu-link {
+        text-decoration: none;
         display: inline-block;
         position: relative;
         color: white;
         font-size: 1.5rem;
         width: 100%;
     }
-    
     .menu-link::after {
         content: '';
         position: absolute;
@@ -30,10 +30,8 @@ export default Vue.extend({
         transform-origin: bottom right;
         transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
     }
-    
     .menu-link:hover::after {
         transform: scaleX(1);
         transform-origin: bottom left;
     }
-  
 </style>

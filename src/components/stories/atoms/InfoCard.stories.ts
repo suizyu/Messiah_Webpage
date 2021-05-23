@@ -5,11 +5,6 @@ export default {
     title: "atoms/Card",
 }
 
-// export const Info_Card = () => ({
-//     components: { Card },
-//     template: "<Card />"
-// })
-
 const Template = (args: any, { argTypes }: any) => ({
     props: Object.keys(argTypes),
     components: { Card },
