@@ -13,6 +13,7 @@
   "dependencies": {
     "@storybook/addon-backgrounds": "^6.2.8",
     "core-js": "^3.9.1",
+    "gsap": "^3.6.1",
     "modern-css-reset": "^1.4.0",
     "nuxt": "^2.15.3",
     "swiper": "5.x",
