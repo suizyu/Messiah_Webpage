@@ -35,7 +35,4 @@ export default Vue.extend({
         transform: scaleX(1);
         transform-origin: bottom left;
     }
-    .text-block {
-        display: block;
-    }
 </style>
