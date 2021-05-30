@@ -2,9 +2,13 @@
     <header>
         <HamburgerButton @btnStateChange="setChildData" v-show="isSP" class="menu-btn"/>
         <div class="menu-back" ref="menu">
-            <img :src="logoPath" class="logo" />
             <nav>
                 <ul class="menu-list">
+                    <li>
+                        <h1>
+                            <img :src="logoPath" class="logo" alt="タイトルロゴ：最果てのメサイア" />
+                        </h1>
+                    </li>
                     <li v-for="m in menuItems" :key="m.id">
                         <MenuLink :name="m.name" :link="m.link" />
                     </li>
@@ -109,11 +113,9 @@ export default Vue.extend({
     }
     .menu-list {
         list-style: none;
+        padding: 0;
+        margin: 0;
         overflow: hidden;
-    }
-    .menu-list li {
-        display: block;
-        float: left;
     }
     .logo {
         display: block;
@@ -142,11 +144,15 @@ export default Vue.extend({
             background: linear-gradient(180deg, rgba(22, 22, 22, 0.7) 71.14572333685322%,rgba(185, 185, 185, 0) 93.32101372756071%)
         }
         .menu-list {
-            width: 75vw;
-            float: right;
+            margin-right: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 80vw;
+            max-width: 900px;
         }
         .menu-list li {
-            text-align: center;
+            display: inline-block;
         }
         .logo {
             float: left;

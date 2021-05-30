@@ -1,6 +1,8 @@
 <template>
     <a class="menu-link" :href="link" target="_blank">
-        {{ name }}
+        <span class="text-block">
+            {{ name }}
+        </span>
     </a>
 </template>
 <script lang="ts">
@@ -12,7 +14,6 @@ export default Vue.extend({
 <style scoped>
     .menu-link {
         text-decoration: none;
-        display: inline-block;
         position: relative;
         color: white;
         font-size: 1.5rem;
@@ -33,5 +34,8 @@ export default Vue.extend({
     .menu-link:hover::after {
         transform: scaleX(1);
         transform-origin: bottom left;
+    }
+    .text-block {
+        display: block;
     }
 </style>
