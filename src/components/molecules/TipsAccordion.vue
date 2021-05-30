@@ -42,9 +42,9 @@ export default Vue.extend({
         stateChange() {
             this.isOpen = !this.isOpen;
             const target = this.$refs.tips;
-            if(this.isOpen) {
+            if (this.isOpen) {
                 gsap.to(target, { height: 'auto', duration: 0.5 });
-            }else{
+            } else {
                 gsap.to(target, { height: '95px', duration: 0.5 });
             }
         }

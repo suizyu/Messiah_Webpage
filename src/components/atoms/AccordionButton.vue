@@ -12,7 +12,6 @@
 <script lang="ts">
 import Vue from 'vue'
 import gsap from 'gsap'
-
 export default Vue.extend({
     props: {
         state: {
@@ -39,6 +38,7 @@ export default Vue.extend({
 <style scoped>
     .accordion-btn {
         position: relative;
+        margin: 5px;
         width: 30px;
         height: 44px;
     }
