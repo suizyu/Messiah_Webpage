@@ -15,6 +15,17 @@ export default Vue.extend({
     },
     mounted() {
         this.$emit('child-data', this.isOpen)
+    },
+    methods: {
+        btnStateChange() {
+            const isBtnOpen = this.isOpen;
+            this.$emit('btnStateChange', isBtnOpen);
+        }
+    },
+    watch: {
+        isOpen: function(val, oldVal) {
+            this.btnStateChange();
+        }
     }
 })
 </script>
@@ -30,7 +41,7 @@ export default Vue.extend({
         left: 0;
         width: 100%;
         height: 4px;
-        background-color: #000;
+        background-color: #fff;
         border-radius: 4px;
     }
     .hmg-btn, .hmg-btn span {
