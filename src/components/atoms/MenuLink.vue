@@ -19,6 +19,10 @@ export default Vue.extend({
         font-size: 1.5rem;
         width: 100%;
     }
+    .text-block {
+        font-family: classico-urw, sans-serif;
+        font-weight: bold;
+    }
     .menu-link::after {
         content: '';
         position: absolute;
@@ -35,4 +39,9 @@ export default Vue.extend({
         transform: scaleX(1);
         transform-origin: bottom left;
     }
+     @media (max-width: 960px) {
+          .menu-link {
+              font-size: 2rem;
+          }
+     }
 </style>
