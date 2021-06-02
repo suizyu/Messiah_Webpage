@@ -114,13 +114,12 @@ export default Vue.extend({
     .menu-list {
         list-style: none;
         padding: 0;
-        margin: 0;
         overflow: hidden;
     }
     .logo {
         display: block;
     }
-    @media (max-width: 959px) {
+    @media (max-width: 960px) {
         .menu-back {
             height: 100%;
             background: radial-gradient(rgba(185, 185, 185, 0.2), rgba(22, 22, 22, 0.7));
@@ -128,14 +127,20 @@ export default Vue.extend({
         }
         .menu-list li {
             text-align: left;
+            display: block;
+            margin: 0 auto;
+        }
+        nav {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
         }
         .logo {
-            max-height: 15vh;
-            margin: 5vh auto;
-            padding: 5px;
+            max-height: 17vh;
+            margin:  5vh 0 5vh 0;
         }
     }
-    @media (min-width: 960px) {
+    @media (min-width: 961px) {
         .menu-back {
             left: 0;
             height: auto;
@@ -148,16 +153,17 @@ export default Vue.extend({
             display: flex;
             justify-content: space-between;
             align-items: center;
-            width: 80vw;
-            max-width: 900px;
+            max-width: 1100px;
+            margin: 0 50px;
         }
         .menu-list li {
             display: inline-block;
+            flex-shrink: 0;
         }
         .logo {
-            float: left;
             width: 150px;
-            margin: 10px 50px;
+            margin: 0 50px;
+            padding: 1px;
         }
     }
 </style>
