@@ -22,7 +22,8 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-    { src: '~/plugins/typekit.js', mode: 'client'}
+    { src: '~/plugins/typekit.js', mode: 'client'},
+    { src: '~/plugins/vue-awesome-swiper', mode: 'client' }
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -32,7 +33,7 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/typescript
     '@nuxt/typescript-build',
-    'vue-awesome-swiper'
+    //'vue-awesome-swiper'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
