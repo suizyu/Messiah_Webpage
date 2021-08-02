@@ -96,6 +96,7 @@ export default Vue.extend({
         width: 100vw;
         max-height: 10vh;
         margin: 0;
+        z-index: 10;
     }
     .menu-back {
         position: fixed;
