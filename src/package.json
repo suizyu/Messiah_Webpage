@@ -11,12 +11,17 @@
     "build-storybook": "build-storybook"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.35",
+    "@fortawesome/free-brands-svg-icons": "^5.15.3",
+    "@fortawesome/vue-fontawesome": "^2.0.2",
     "@storybook/addon-backgrounds": "^6.2.8",
+    "@types/node": "^16.4.8",
     "core-js": "^3.9.1",
     "gsap": "^3.6.1",
     "luxy.js": "^0.1.0",
     "modern-css-reset": "^1.4.0",
     "nuxt": "^2.15.3",
+    "nuxt-fontawesome": "^0.4.0",
     "swiper": "5.x",
     "vue-awesome-swiper": "^4.1.1"
   },

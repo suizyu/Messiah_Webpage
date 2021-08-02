@@ -17,13 +17,15 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
-    'modern-css-reset'
+    'modern-css-reset',
+    '@fortawesome/fontawesome-svg-core/styles.css'
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     { src: '~/plugins/typekit.js', mode: 'client'},
-    { src: '~/plugins/vue-awesome-swiper', mode: 'client' }
+    { src: '~/plugins/vue-awesome-swiper.js', mode: 'client' },
+    { src: '~/pligoms/fontwesome.js', mode: 'client' }
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -38,6 +40,7 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    'nuxt-fontawesome'
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
@@ -46,5 +49,14 @@ export default {
   
   storybook: {
     // Options
+  },
+
+  fontawesome: {
+    imports: [
+      {
+        set: '@fortawesome/free-brands-svg-icons',
+        icons: ['fLine', 'faTwitter', 'faFacebookSquare']
+      }
+    ]
   }
 }
