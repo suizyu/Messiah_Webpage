@@ -43,10 +43,12 @@ export default Vue.component('custom-heading',{
         color: white;
         font-family: classico-urw, sans-serif;
         text-align: center;
+        font-size: 2rem;
         position: relative;
+        margin: 10px 0;
     }
     img {
-        margin: 0 auto;
+        margin: 3px auto;
         position: absolute;
         bottom: 7px;
     }

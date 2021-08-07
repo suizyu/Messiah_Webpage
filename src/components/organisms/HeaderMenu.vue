@@ -145,7 +145,7 @@ export default Vue.extend({
             height: 65px;
             line-height: 10vh;
             margin: 0;
-            padding: 5px 0 0 10px;
+            padding: 5px 0 10px 0;
             background: linear-gradient(180deg, rgba(22, 22, 22, 0.7) 71.14572333685322%,rgba(185, 185, 185, 0) 93.32101372756071%);
         }
         .menu-list {
@@ -153,8 +153,13 @@ export default Vue.extend({
             display: flex;
             justify-content: space-between;
             align-items: center;
-            max-width: 1100px;
-            margin: 0 50px;
+            max-width: 1300px;
+            margin: 0 10vw;
+        }
+        nav,
+        .menu-list,
+        .menu-list > ul {
+            height: 100%;
         }
         .menu-list li {
             display: inline-block;

@@ -13,7 +13,6 @@ export default Vue.extend({
         position: absolute;
         left: 2px;
         top: 1px;
-        bottom: 25vh;
         color: white;
         font-size: 0.7rem;
         font-family: kinuta-maruminshinano-stdn, serif;
@@ -28,7 +27,7 @@ export default Vue.extend({
         display: inline-block;
         position: absolute;
         right:5%;
-        bottom: 0;
+        bottom: -10vh;
         height: 38vh;
         z-index: 3;
     }

@@ -1,6 +1,6 @@
 <template>
     <section class="sns-share">
-        <custom-h :level="1">Share</custom-h>
+        <CustomH :level="1">Share</CustomH>
         <div class="iconbox">
             <a v-for="s in snsInfos" :key="s.id" :href="s.url" target="_blank">
                 <SnsIcon :iconName="s.name" class="icon"/>
@@ -38,5 +38,8 @@ export default Vue.extend({
         justify-content: space-evenly;
         margin: 10px auto;
         width: 250px;
+    }
+    h1.custom-h {
+        font-size: 1.5rem;
     }
 </style>
