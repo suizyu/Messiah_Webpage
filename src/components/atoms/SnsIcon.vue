@@ -8,13 +8,17 @@ export default Vue.extend({
         iconName: {
             type: String,
             required: true
+        },
+        url: {
+            type: String,
+            required: false
         }
     }
 })
 </script>
 <style scoped>
     .sns-icon {
-        color: indianred;
-        font-size: 6rem;
+        color: rgb(32, 32, 32);
+        font-size: 2.5rem;
     }
 </style>

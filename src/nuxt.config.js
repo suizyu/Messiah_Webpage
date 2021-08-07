@@ -55,7 +55,7 @@ export default {
     imports: [
       {
         set: '@fortawesome/free-brands-svg-icons',
-        icons: ['fLine', 'faTwitter', 'faFacebookSquare']
+        icons: ['fLine', 'faTwitter', 'faFacebookSquare', 'instagram']
       }
     ]
   }
