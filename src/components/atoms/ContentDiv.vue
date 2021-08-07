@@ -13,7 +13,7 @@ export default Vue.extend({
         margin: 0 auto;
         width: 80vw;
         max-width: 800px;
-        background: hotpink;
+        background: transparent;
         padding: 10px 0;
     }
 </style>

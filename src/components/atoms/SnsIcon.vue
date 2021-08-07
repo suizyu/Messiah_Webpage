@@ -1,8 +1,9 @@
 <template>
-    <fa :icon="['fab',iconName]" class="sns-icon" />
+    <fa :icon="GetIcon" class="sns-icon" />
 </template>
 <script lang="ts">
 import Vue from 'vue'
+import { faLine, faTwitter, faFacebookSquare } from '@fortawesome/free-brands-svg-icons'
 export default Vue.extend({
     props: {
         iconName: {
@@ -12,6 +13,17 @@ export default Vue.extend({
         url: {
             type: String,
             required: false
+        }
+    },
+    computed: {
+        GetIcon() {
+            if (this.iconName == 'line') {
+                return faLine;
+            } else if (this.iconName == 'twitter') {
+                return faTwitter;
+            } else if (this.iconName == 'facebook') {
+                return faFacebookSquare;
+            }
         }
     }
 })

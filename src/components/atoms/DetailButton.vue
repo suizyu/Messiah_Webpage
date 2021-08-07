@@ -29,7 +29,6 @@
         bottom: 0;
         width: 0;
         display: block;
-        /* background: linear-gradient(to left, #b0a200 0%, #977b00 100%);; */
         background: #b0a200;
         z-index: -1;
         transition: .3s;

@@ -1,4 +1,3 @@
-import { template } from "@babel/core";
 import TipsAccordion from "../../molecules/TipsAccordion.vue";
 
 export default {

@@ -25,7 +25,7 @@ export default {
   plugins: [
     { src: '~/plugins/typekit.js', mode: 'client'},
     { src: '~/plugins/vue-awesome-swiper.js', mode: 'client' },
-    { src: '~/pligoms/fontwesome.js', mode: 'client' }
+    { src: '~/plugins/fontAwesome.js', mode: 'client' }
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -46,17 +46,12 @@ export default {
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
   },
-  
+
   storybook: {
     // Options
   },
 
   fontawesome: {
-    imports: [
-      {
-        set: '@fortawesome/free-brands-svg-icons',
-        icons: ['fLine', 'faTwitter', 'faFacebookSquare', 'instagram']
-      }
-    ]
+    component: 'fa'
   }
 }

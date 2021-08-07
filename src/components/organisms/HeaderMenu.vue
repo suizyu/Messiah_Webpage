@@ -5,9 +5,7 @@
             <nav>
                 <ul class="menu-list">
                     <li>
-                        <h1>
-                            <img :src="logoPath" class="logo" alt="タイトルロゴ：最果てのメサイア" />
-                        </h1>
+                        <img :src="logoPath" class="logo" alt="タイトルロゴ：最果てのメサイア" />
                     </li>
                     <li v-for="m in menuItems" :key="m.id">
                         <MenuLink :name="m.name" :link="m.link" />
@@ -20,10 +18,10 @@
 <script lang="ts">
 import Vue from 'vue'
 import gsap from 'gsap'
-import HamburgerButton from '../atoms/HamburgerButton.vue';
-import menus from '../../assets/menu.json';
+import HamburgerButton from '../atoms/HamburgerButton.vue'
+import menus from '../../assets/menu.json'
 export type Menus = typeof menus
-import MenuLink from '../atoms/MenuLink.vue';
+import MenuLink from '../atoms/MenuLink.vue'
 export default Vue.extend({
     components: {
         HamburgerButton,
@@ -54,7 +52,7 @@ export default Vue.extend({
                     gsap.to(menu, { left: '0'});
                 } else {
                     this.isSP = true;
-                    if (this.isOpenMenu){
+                    if (this.isOpenMenu) {
                         gsap.set(menu, { visibility: 'visible' });
                     } else {
                         gsap.set(menu, { visibility: 'hidden' });
@@ -144,10 +142,11 @@ export default Vue.extend({
     @media (min-width: 961px) {
         .menu-back {
             left: 0;
-            height: auto;
+            height: 65px;
             line-height: 10vh;
             margin: 0;
-            background: linear-gradient(180deg, rgba(22, 22, 22, 0.7) 71.14572333685322%,rgba(185, 185, 185, 0) 93.32101372756071%)
+            padding: 5px 0 0 10px;
+            background: linear-gradient(180deg, rgba(22, 22, 22, 0.7) 71.14572333685322%,rgba(185, 185, 185, 0) 93.32101372756071%);
         }
         .menu-list {
             margin-right: auto;
@@ -162,7 +161,7 @@ export default Vue.extend({
             flex-shrink: 0;
         }
         .logo {
-            width: 150px;
+            width: 110px;
             margin: 0 50px;
             padding: 1px;
         }

@@ -3,7 +3,7 @@
         <custom-h :level="1">Share</custom-h>
         <div class="iconbox">
             <a v-for="s in snsInfos" :key="s.id" :href="s.url" target="_blank">
-                <SnsIcon :iconName="s.iconName" class="icon"/>
+                <SnsIcon :iconName="s.name" class="icon"/>
             </a>
         </div>
     </section>
