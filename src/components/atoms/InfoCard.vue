@@ -4,8 +4,8 @@
             <img :src="imgPath(imgName)" class="thumbnailImg">
         </div>
         <div class="info">
-            <span class="date">2021/04/21</span>
-            <p>公式サイトオープン。</p>
+            <span class="date">{{ date }}</span>
+            <p>{{ title }}</p>
         </div>
     </a>
 </template>
@@ -14,6 +14,8 @@ import Vue from 'vue'
 export default Vue.extend({
     props:{
         imgName: String,
+        date: String,
+        title: String,
         linkTo: {
             type: String,
             default: "https://github.com/suizyu",
@@ -63,7 +65,7 @@ export default Vue.extend({
         transition: all 0.5s;
     }
     .card:hover .thumbnailImg {
-        transform: scale(1.5, 1.5);
+        transform: scale(1.25, 1.25);
         transition: 0.5s all;
     }
 </style>
