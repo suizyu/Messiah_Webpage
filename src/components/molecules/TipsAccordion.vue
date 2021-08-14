@@ -57,7 +57,7 @@ export default Vue.extend({
         background-color: teal;
         height: 95px;
         width: 100%;
-        margin: 15px 0;
+        margin: 20px 0;
         padding: 5px;
         overflow: hidden;
         z-index: 1;
@@ -100,7 +100,7 @@ export default Vue.extend({
         margin: 0 auto;
         padding: 15px 0;
         width: 70vw;
-        max-width: 600px;
+        max-width: 750px;
         z-index: 2;
     }
 </style>

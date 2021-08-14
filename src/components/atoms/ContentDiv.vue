@@ -15,5 +15,6 @@ export default Vue.extend({
         max-width: 900px;
         background: transparent;
         padding: 10px 0;
+        text-align: center;
     }
 </style>
