@@ -40,11 +40,17 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-    'nuxt-fontawesome'
+    'nuxt-fontawesome',
+    '@nuxtjs/axios'
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+  },
+
+  privateRuntimeConfig: {
+    apiKey: process.env.API_KEY,
+    baseUrl: process.env.BASE_URL
   },
 
   storybook: {
@@ -53,5 +59,9 @@ export default {
 
   fontawesome: {
     component: 'fa'
+  },
+
+  axios: {
+    // proxy: true
   }
 }
