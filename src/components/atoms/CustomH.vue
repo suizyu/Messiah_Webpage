@@ -4,7 +4,10 @@ export default Vue.component('custom-heading',{
     render: function(createElement) {
         return createElement(
             'h' + this.level,
-            { class: "custom-h"  },
+            { 
+                class: "custom-h",
+                style: this.alignStyle
+            },
             [
                 this.$slots.default, 
                 this.decorate ?
@@ -28,6 +31,18 @@ export default Vue.component('custom-heading',{
             type: Boolean,
             default: false,
             required: false
+        },
+        align: {
+            type: String,
+            default: 'center',
+            required: false
+        }
+    },
+    computed: {
+        alignStyle() {
+            return {
+                '--align' : this.align
+            }
         }
     }
 })
@@ -40,9 +55,10 @@ export default Vue.component('custom-heading',{
         max-height: 45px;
     }
     .custom-h {
+        --align: 'center';
         color: white;
         font-family: classico-urw, sans-serif;
-        text-align: center;
+        text-align: var(--align);
         font-size: 2rem;
         position: relative;
         margin: 10px 0;
