@@ -10,7 +10,7 @@ const Template = (args: any, { argTypes }: any) => ({
     template: `<AccordionButton v-bind="$props" />`
 })
 
-export const detail_buttons = Template.bind({})
-detail_buttons.args = {
+export const accordion_button = Template.bind({})
+accordion_button.args = {
     state: true
 }
