@@ -1,9 +1,9 @@
 <template>
-    <a class="menu-link" :href="link" target="_blank">
+    <nuxt-link class="menu-link" :to="link" target="_blank">
         <span class="text-block">
             {{ name }}
         </span>
-    </a>
+    </nuxt-link>
 </template>
 <script lang="ts">
 import Vue from 'vue'
