@@ -67,12 +67,18 @@ export default Vue.extend({
         display: flex;
         flex-wrap: wrap;
         text-align: left;
-        min-width: 250px;
+        min-width: 275px;
         max-width: 300px;
     }
     .product-discriptions div {
         margin: 5px 10px;
-        flex-grow: 1;
+    }
+    .product-discriptions div:nth-child(-n + 2) {
+        width: 100%;
+    }
+    .product-discriptions > div:nth-child(3),
+    .product-discriptions > div:nth-child(5) {
+        width: 105px;
     }
     .product-discriptions dt {
         font-size: 1rem;
