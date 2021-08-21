@@ -2,7 +2,7 @@
     <div class="discriptions">
         <div class="logo-container">
             <img src="../../../assets/images/logo_white_pc.png" 
-                alt="最果てのメサイア(ロゴ)"
+                alt="最果てのメサイア"
                 class="logo">
         </div>
         <dl class="product-discriptions">
@@ -56,6 +56,7 @@ export default Vue.extend({
     .logo-container {
         display: flex;
         align-items: center;
+        justify-content: center;
     }
     .logo {
         width: 30vw;
@@ -75,6 +76,11 @@ export default Vue.extend({
     }
     .product-discriptions dt {
         font-size: 1rem;
+    }
+    @media (max-width: 960px) {
+        .product-discriptions {
+            margin: 0 auto;
+        }
     }
     @media (min-width: 961px) {
         .discriptions {

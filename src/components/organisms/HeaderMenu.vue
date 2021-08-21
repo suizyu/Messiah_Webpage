@@ -5,7 +5,7 @@
             <nav>
                 <ul class="menu-list">
                     <li>
-                        <img :src="logoPath" class="logo" alt="タイトルロゴ：最果てのメサイア" />
+                        <img :src="logoPath" class="logo" alt="最果てのメサイア" />
                     </li>
                     <li v-for="m in menuItems" :key="m.id">
                         <MenuLink :name="m.name" :link="m.link" />
