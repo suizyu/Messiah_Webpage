@@ -1,11 +1,13 @@
 <template>
     <div class="caractor-label">
-        <div class="name-block">
-            <span class="name">{{ name }}</span>
-            <span class="voice">CV：{{ voiceActor }}</span>
+        <div class="info">
+            <div class="name-block">
+                <span class="name">{{ name }}</span>
+                <span class="voice" v-if="voiceActor">CV：{{ voiceActor }}</span>
+            </div>
+            <hr v-if="border" />
+            <span class="spelling" >{{ spelling }}</span>
         </div>
-        <hr />
-        <span class="spelling">{{ spelling }}</span>
     </div>
 </template>
 <script lang="ts">
@@ -26,15 +28,23 @@ export default Vue.extend({
             type: String,
             required: false,
             default: "なし"
+        },
+        border: {
+            type: Boolean,
+            required: false,
+            default: true
         }
     }
 })
 </script>
 <style scoped>
     .caractor-label {
+        position: relative;
+        width: 100%;
+        height: 50vh;
         color: #fff;
         text-align: left;
-        width: 45%;
+        overflow: hidden;
     }
     .caractor-label hr {
         border-width: 1px;
@@ -56,6 +66,6 @@ export default Vue.extend({
     }
     .spelling {
         font-family: classico-urw, sans-serif;
-        font-size: 1.2rem;
+        font-size: 1.4rem;
     }
 </style>
