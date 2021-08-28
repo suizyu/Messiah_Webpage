@@ -54,8 +54,9 @@ export default Vue.extend({
         font-weight: bold;
     }
      @media (max-width: 960px) {
-          .menu-link {
-              font-size: 2rem;
-          }
-     }
+        .menu-link,
+        .disable-link  {
+            font-size: 2rem;
+        }
+    }
 </style>
