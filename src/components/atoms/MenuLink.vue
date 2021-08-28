@@ -1,5 +1,5 @@
 <template>
-    <nuxt-link class="menu-link" :to="link" target="_blank">
+    <nuxt-link :class="linkClass" :to="link" target="_self">
         <span class="text-block">
             {{ name }}
         </span>
@@ -8,20 +8,30 @@
 <script lang="ts">
 import Vue from 'vue'
 export default Vue.extend({
-    props: ['name', 'link']
+    props: ['name', 'link'],
+    computed: {
+        linkClass() {
+            return this.link ? 'menu-link' : 'disable-link';
+        }
+    }
 })
 </script>
 <style scoped>
-    .menu-link {
+    .menu-link,
+    .disable-link {
         text-decoration: none;
         position: relative;
         color: white;
         font-size: 1.5rem;
         width: 100%;
     }
-    .text-block {
-        font-family: classico-urw, sans-serif;
-        font-weight: bold;
+    .disable-link {
+        color: rgb(131, 131, 131);
+        pointer-events: none;
+    }
+    .menu-link:hover {
+        cursor: pointer;
+        cursor: hand;
     }
     .menu-link::after {
         content: '';
@@ -38,6 +48,10 @@ export default Vue.extend({
     .menu-link:hover::after {
         transform: scaleX(1);
         transform-origin: bottom left;
+    }
+    .text-block {
+        font-family: classico-urw, sans-serif;
+        font-weight: bold;
     }
      @media (max-width: 960px) {
           .menu-link {
