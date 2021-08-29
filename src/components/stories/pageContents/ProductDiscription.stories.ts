@@ -1,4 +1,4 @@
-import ProductDiscription from "../../pageContents/spec/ProductDiscription.vue";
+import ProductDiscription from "../../pageContents/product/ProductDiscription.vue";
 
 export default {
     title: "pageContents/ProductDiscription",
