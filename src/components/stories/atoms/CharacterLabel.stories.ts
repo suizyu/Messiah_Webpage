@@ -1,13 +1,13 @@
-import CharactorLabel from "../../atoms/CharactorLabel.vue";
+import CharacterLabel from "../../atoms/CharacterLabel.vue";
 
 export default {
-    title: "atoms/CharactorLabel",
+    title: "atoms/CharacterLabel",
 }
 
 const Template = (args: any, { argTypes }: any) => ({
     props: Object.keys(argTypes),
-    components: { CharactorLabel },
-    template: `<CharactorLabel v-bind="$props" />`
+    components: { CharacterLabel },
+    template: `<CharacterLabel v-bind="$props" />`
 })
 
 export const default_state = Template.bind({})

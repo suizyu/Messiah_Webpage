@@ -1,5 +1,5 @@
 <template>
-    <div class="caractor-label">
+    <div class="character-label">
         <div class="info">
             <div class="name-block">
                 <span class="name">{{ name }}</span>
@@ -38,14 +38,14 @@ export default Vue.extend({
 })
 </script>
 <style scoped>
-    .caractor-label {
+    .character-label {
         position: relative;
         width: 100%;
         color: #fff;
         text-align: left;
         overflow: hidden;
     }
-    .caractor-label hr {
+    .character-label hr {
         border-width: 1px;
         border-style: solid;
         border-color: #fff;
