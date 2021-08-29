@@ -1,14 +1,17 @@
 <template>
     <header>
-        <HamburgerButton @btnStateChange="setChildData" v-show="isSP" class="menu-btn"/>
+        <HamburgerButton v-show="isSP" 
+            @btnStateChange="setChildData"
+            ref="hamburgerBtn"
+            class="menu-btn"/>
         <div class="menu-back" ref="menu">
             <nav>
                 <ul class="menu-list">
                     <li>
                         <img :src="logoPath" class="logo" alt="最果てのメサイア" />
                     </li>
-                    <li v-for="m in menuItems" :key="m.id">
-                        <MenuLink :name="m.name" :link="m.link" />
+                    <li v-for="m in menuItems" :key="m.id" @click="ClickedMenu" >
+                        <MenuLink :name="m.name" :link="m.link"/>
                     </li>
                 </ul>
             </nav>
@@ -72,6 +75,13 @@ export default Vue.extend({
             } else {
                 gsap.to(menu, { left: '100%', duration: 0.3 });
             }
+        },
+        ClickedMenu() {
+            console.log("click MenuLink!")
+            if (this.isSP) {
+                this.isOpenMenu = false;
+                this.$refs.hamburgerBtn.btnClick();
+            }
         }
     },
     watch: {
@@ -121,7 +131,7 @@ export default Vue.extend({
     @media (max-width: 960px) {
         .menu-back {
             height: 100%;
-            background: radial-gradient(rgba(185, 185, 185, 0.2), rgba(22, 22, 22, 0.7));
+            background: radial-gradient(rgba(185, 185, 185, 0), rgba(22, 22, 22, 0.9));
             backface-visibility:hidden;
         }
         .menu-list li {
@@ -154,7 +164,7 @@ export default Vue.extend({
             justify-content: space-between;
             align-items: center;
             max-width: 1300px;
-            margin: 0 10vw;
+            margin: 0 5vw;
         }
         nav,
         .menu-list,

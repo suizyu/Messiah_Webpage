@@ -1,5 +1,5 @@
 <template>
-    <div class="hmg-btn" @click="isOpen=!isOpen" :class='{active: isOpen}'>
+    <div class="hmg-btn" @click="btnClick" :class='{active: isOpen}'>
         <span></span>
         <span></span>
         <span></span>
@@ -20,6 +20,9 @@ export default Vue.extend({
         btnStateChange() {
             const isBtnOpen = this.isOpen;
             this.$emit('btnStateChange', isBtnOpen);
+        },
+        btnClick() {
+            this.isOpen = !this.isOpen;
         }
     },
     watch: {
