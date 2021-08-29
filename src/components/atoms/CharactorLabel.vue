@@ -27,7 +27,7 @@ export default Vue.extend({
         voiceActor: {
             type: String,
             required: false,
-            default: "なし"
+            default: ""
         },
         border: {
             type: Boolean,
@@ -41,7 +41,6 @@ export default Vue.extend({
     .caractor-label {
         position: relative;
         width: 100%;
-        height: 50vh;
         color: #fff;
         text-align: left;
         overflow: hidden;
