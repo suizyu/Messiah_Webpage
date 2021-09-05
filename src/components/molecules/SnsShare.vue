@@ -10,7 +10,7 @@
 </template>
 <script lang="ts">
 import Vue from 'vue'
-import snsItems from '../../assets/snsShare.json'
+import snsItems from '~/assets/snsShare.json'
 import CustomH from '../atoms/CustomH.vue'
 import SnsIcon from '../atoms/SnsIcon.vue'
 export type SnsItems = typeof snsItems

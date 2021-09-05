@@ -5,7 +5,7 @@
                 <small>※掲載されている画像はすべて開発中のものです。</small>
             </p>
             <SnsShare />
-            <img src="../../assets/images/logo_black_pc.png" 
+            <img src="~/assets/images/logo_black_pc.png" 
                 alt="最果てのメサイア(ロゴ)" 
                 class="corporate-logo" />
             <p class="footer-text">

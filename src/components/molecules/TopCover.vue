@@ -1,7 +1,7 @@
 <template>
     <div class="top-cover">
       <div class="top-info">
-        <img src="../../assets/images/logo_black_pc.png" alt="最果てのメサイア(ロゴ)" />
+        <img src="~/assets/images/logo_black_pc.png" alt="最果てのメサイア(ロゴ)" />
       </div>
       <ScrollGuide />
     </div>

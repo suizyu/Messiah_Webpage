@@ -12,7 +12,6 @@ const Template = (args: any, { argTypes }: any) => ({
 
 export const LogoCard = Template.bind({})
 LogoCard.args = {
-    imgName: "logo_black_pc.png",
     date: "2021/08/32",
     title: "demo",
     linkTo: "https://github.com/suizyu"

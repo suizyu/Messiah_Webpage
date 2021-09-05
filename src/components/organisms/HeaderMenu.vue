@@ -8,7 +8,9 @@
             <nav>
                 <ul class="menu-list">
                     <li>
-                        <img :src="logoPath" class="logo" alt="最果てのメサイア" />
+                        <img src="~/assets/images/logo_white_pc.png" 
+                            class="logo" 
+                            alt="最果てのメサイア" />
                     </li>
                     <li v-for="m in menuItems" :key="m.id" @click="ClickedMenu" >
                         <MenuLink :name="m.name" :link="m.link"/>
@@ -22,7 +24,7 @@
 import Vue from 'vue'
 import gsap from 'gsap'
 import HamburgerButton from '../atoms/HamburgerButton.vue'
-import menus from '../../assets/menu.json'
+import menus from '~/assets/menu.json'
 export type Menus = typeof menus
 import MenuLink from '../atoms/MenuLink.vue'
 export default Vue.extend({
@@ -35,7 +37,6 @@ export default Vue.extend({
             isOpenMenu: false,
             isBtnOpen: null,
             isSP: false,
-            logoPath: require("../../assets/images/logo_white_pc.png"),
             menuItems: menus
         }
     },

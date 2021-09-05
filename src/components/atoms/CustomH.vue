@@ -14,7 +14,7 @@ export default Vue.component('custom-heading',{
                     createElement(
                         'img', 
                         { 
-                            attrs: { src: require('../../assets/images/heading-border-pc.png') },
+                            attrs: { src: require('~/assets/images/heading-border-pc.png') },
                             class:  "border-decorate"
                         }
                     ) :

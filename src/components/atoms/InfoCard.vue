@@ -13,19 +13,23 @@
 import Vue from 'vue'
 export default Vue.extend({
     props:{
-        imgName: String,
         date: String,
         title: String,
+        imgName: {
+            type: String,
+            required: false,
+            default: 'logo_black_pc.png'
+        },
         linkTo: {
             type: String,
-            default: "https://github.com/suizyu",
-            required: false
+            required: false,
+            default: "https://github.com/suizyu"
         }
 
     },
     methods: {
         imgPath(name: string) {
-            return require("../../assets/images/" + name);
+            return require("~/assets/images/" + name);
         }
     }
 })
