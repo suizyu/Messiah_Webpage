@@ -25,7 +25,8 @@ export default {
   plugins: [
     { src: '~/plugins/typekit.js', mode: 'client'},
     { src: '~/plugins/vue-awesome-swiper.js', mode: 'client' },
-    { src: '~/plugins/fontAwesome.js', mode: 'client' }
+    { src: '~/plugins/fontAwesome.js', mode: 'client' },
+    { src: '~/plugins/axios.js' }
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -62,6 +63,13 @@ export default {
   },
 
   axios: {
-    // proxy: true
+    proxy: true
+  },
+
+  proxy: {
+    '/api/': {
+      target: process.env.BASE_URL,
+      pathRewrite: {'^/api/': '/'},
+    }
   }
 }
