@@ -48,9 +48,9 @@ export default Vue.extend({
     },
     methods: {
         resizeEvent() {
-                const matchSP = window.matchMedia('(min-width: 960px)').matches;
+                const matchSP = window.matchMedia('(max-width: 960px)').matches;
                 const menu = this.$refs.menu;
-                if (matchSP) {
+                if (!matchSP) {
                     this.isSP = false;
                     gsap.set(menu, { visibility: 'visible' });
                     gsap.to(menu, { left: '0'});

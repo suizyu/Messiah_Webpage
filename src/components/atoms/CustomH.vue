@@ -67,5 +67,6 @@ export default Vue.component('custom-heading',{
         margin: 3px auto;
         position: absolute;
         bottom: 7px;
+        user-select: none;
     }
 </style>
