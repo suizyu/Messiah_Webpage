@@ -1,9 +1,12 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
+  ssr: true,
+  target: 'static' ,
+
   head: {
     title: 'src',
     htmlAttrs: {
-      lang: 'en'
+      lang: 'ja'
     },
     meta: [
       { charset: 'utf-8' },
@@ -18,13 +21,12 @@ export default {
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
     'modern-css-reset',
-    '@fortawesome/fontawesome-svg-core/styles.css'
+    '@fortawesome/fontawesome-svg-core/styles.css',
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     { src: '~/plugins/typekit.js', mode: 'client'},
-    { src: '~/plugins/vue-awesome-swiper.js', mode: 'client' },
     { src: '~/plugins/fontAwesome.js', mode: 'client' },
     { src: '~/plugins/axios.js' }
   ],
