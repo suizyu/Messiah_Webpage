@@ -1,5 +1,5 @@
 <template>
-    <div class="hmg-btn" @click="btnClick" :class='{active: isOpen}'>
+    <div class="hmg-btn" @click="btnClick" :class="{active: isOpen}">
         <span></span>
         <span></span>
         <span></span>

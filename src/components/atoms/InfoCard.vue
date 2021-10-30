@@ -39,10 +39,12 @@ export default Vue.extend({
         background-color: white;
         padding: 5px 10px;
         height: 55px;
+        text-align: left;
     }
     a.card {
         display: block;
         text-decoration: none;
+        margin: 0 auto;
     }
     .card {
         width: 300px;
@@ -50,7 +52,6 @@ export default Vue.extend({
     }
     .card p, .date {
         color: #3C3F4D;
-        text-align: left;
         margin: 0 auto;
     }
     .date  {

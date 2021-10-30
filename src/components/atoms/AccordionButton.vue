@@ -1,7 +1,7 @@
 <template>
     <div class="accordion-btn">
         <svg class="open-btn" width="25" height="21" viewBox="0 0 25 21" ref="open">
-            <path class="open" d="M12.5,0,25,21H0Z" transform="translate(25 21) rotate(180)" fill="#fff"/>
+            <path class="open" d="M12.5,0,25,21H0Z" transform="translate(25 21) rotate(180)" fill="#2a0909c7"/>
         </svg>
         <div class="close-btn" ref="close">
             <span class="closeParts"></span>
@@ -67,7 +67,7 @@ export default Vue.extend({
         left: 0;
         width: 100%;
         height: 3px;
-        background-color: #fff;
+        background-color: #2a0909c7;
         border-radius: 4px;
     }
     .close-btn,  .close-btn span {

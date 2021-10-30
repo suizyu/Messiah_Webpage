@@ -12,7 +12,7 @@ export default Vue.extend({
     .content {
         margin: 0 auto;
         width: 80vw;
-        max-width: 900px;
+        max-width: 1000px;
         background: transparent;
         padding: 10px 0;
         text-align: center;

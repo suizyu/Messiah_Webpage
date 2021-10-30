@@ -26,7 +26,7 @@ export default Vue.extend({
         width: 100%;
     }
     .disable-link {
-        color: rgb(131, 131, 131);
+        color: rgba(255, 255, 255, 0.459);
         pointer-events: none;
     }
     .menu-link:hover {

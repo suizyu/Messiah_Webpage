@@ -1,7 +1,7 @@
 <template>
     <div class="top-cover">
       <div class="top-info">
-        <img src="~/assets/images/logo_black_pc.png" alt="最果てのメサイア(ロゴ)" />
+        <img src="../../assets/images/logo_black_pc.png" alt="最果てのメサイア(ロゴ)" />
       </div>
       <ScrollGuide />
     </div>
@@ -18,7 +18,9 @@ export default Vue.extend({
 <style scoped>
   .top-cover {
       margin: 0;
-      height: 110vh; background: linear-gradient(rgb(93, 134, 26) 0%, rgba(73, 180, 130, 0.84) 61.91%, rgba(161, 217, 255, 0.46) 75.31%, rgba(255, 255, 255, 0) 99.22%, rgba(0, 128, 128, 0) 100%);
+      height: 100vh;
+      background: url(../../assets/images/bg/sky01.png) center center no-repeat;
+      background-size: cover;
       z-index: 1;
   }
   .top-info {

@@ -59,7 +59,7 @@ export default Vue.component('custom-heading',{
         color: white;
         font-family: classico-urw, sans-serif;
         text-align: var(--align);
-        font-size: 2rem;
+        font-size: 2.3em;
         position: relative;
         margin: 10px 0;
     }

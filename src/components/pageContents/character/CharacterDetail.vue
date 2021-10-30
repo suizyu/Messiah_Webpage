@@ -172,7 +172,8 @@ export default Vue.extend({
         }
         .quote-box {
             display: flex;
-            align-items: center;
+            flex-flow: column;
+            justify-content: center;
             position: absolute;
             top: 0;
             left: 0;
