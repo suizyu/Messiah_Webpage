@@ -5,32 +5,34 @@
                 alt="最果てのメサイア"
                 class="logo">
         </div>
-        <dl class="product-discriptions">
-            <div>
-                <dt>タイトル</dt>
-                <dd>最果てのメサイア</dd>
-            </div>
-            <div>
-                <dt>ジャンル</dt>
-                <dd>ストーリーRPG</dd>
-            </div>
-            <div>
-                <dt>プレイ人数</dt>
-                <dd>1人</dd>
-            </div>
-            <div>
-                <dt>プラットフォーム</dt>
-                <dd>未定</dd>
-            </div>
-            <div>
-                <dt>希望小売価格</dt>
-                <dd>未定</dd>
-            </div>
-            <div>
-                <dt>CERO</dt>
-                <dd>審査予定</dd>
-            </div>
-        </dl>
+        <div class="discription-container">
+            <dl class="product-discriptions">
+                <div>
+                    <dt>タイトル</dt>
+                    <dd>最果てのメサイア</dd>
+                </div>
+                <div>
+                    <dt>ジャンル</dt>
+                    <dd>ストーリーRPG</dd>
+                </div>
+                <div>
+                    <dt>プレイ人数</dt>
+                    <dd>1人</dd>
+                </div>
+                <div>
+                    <dt>プラットフォーム</dt>
+                    <dd>未定</dd>
+                </div>
+                <div>
+                    <dt>希望小売価格</dt>
+                    <dd>未定</dd>
+                </div>
+                <div>
+                    <dt>CERO</dt>
+                    <dd>審査予定</dd>
+                </div>
+            </dl>
+        </div>
     </div>
 </template>
 <script lang="ts">
@@ -53,7 +55,8 @@ export default Vue.extend({
     .discriptions > div {
         margin: 0 20px;
     }
-    .logo-container {
+    .logo-container,
+    .discription-container {
         display: flex;
         align-items: center;
         justify-content: center;
