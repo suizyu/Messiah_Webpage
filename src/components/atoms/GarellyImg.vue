@@ -29,13 +29,6 @@ export default Vue.extend({
     },
     data() {
         return {
-           testImages:[
-                {
-                    src: 'https://dummyimage.com/600x600/fcc/000.png&text=Uploaded3',
-                    thumb: 'https://dummyimage.com/150x150/fcc/000.png&text=thumb1',
-                    id: 0
-                }
-            ],
             imageIndex: null
         }
     },
