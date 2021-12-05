@@ -61,7 +61,8 @@ export default Vue.extend({
         border: 1px solid var(--main-color);
         margin: 30px auto;
         padding: 10px 0;
-        width: 328px;
+        width: 80vw;
+        max-width: 328px;
         backdrop-filter: blur(5px);
         line-height: 1;
     }

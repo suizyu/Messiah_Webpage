@@ -132,7 +132,7 @@ export default Vue.extend({
     @media (max-width: 960px) {
         .menu-back {
             height: 100%;
-            background: radial-gradient(rgba(185, 185, 185, 0), rgba(22, 22, 22, 0.9));
+            background: radial-gradient(rgba(37, 37, 37, 0.6), rgba(22, 22, 22, 0.95));
             backface-visibility:hidden;
         }
         .menu-list li {
