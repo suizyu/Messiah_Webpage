@@ -5,9 +5,6 @@
             :alt="this.name"/>
         <div class="quote-box">
             <slot name="quote">
-                <p>
-                    {{ this.bindData }} <br />
-                </p>
             </slot>
         </div>
         <div class="sp-label-container">
@@ -56,7 +53,7 @@ export default Vue.extend({
     },
     data() {
         return {
-            isSP: "",
+            isSP: false,
             bindData: {
                 name: "",
                 spelling: "",
@@ -153,7 +150,7 @@ export default Vue.extend({
     }
     @media (min-width: 961px) {
         .character {
-            height: 120vh;
+            height: 105vh;
             max-width: 1300px;
         }
         .label {
@@ -166,8 +163,7 @@ export default Vue.extend({
             position: absolute;
             right: -10%;
             top: .5%;
-            /* height: 80%; */
-            height: 1033px;
+            height: 1000px;
             z-index: 2;
         }
         .quote-box {
@@ -185,6 +181,7 @@ export default Vue.extend({
             left: 0;
             top: 52vh;
             width: 55%;
+            z-index: 5;
         }
     }
 </style>

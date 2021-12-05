@@ -55,7 +55,6 @@ export default Vue.extend({
     .tips {
         position: relative;
         background-image: url(../../assets/images/bg/2544869.jpg);
-        background-clip: padding-box;
         height: 95px;
         width: 100%;
         margin: 20px 0;
@@ -82,7 +81,6 @@ export default Vue.extend({
         height: 95px;
         line-height: 95px;
         margin: 0 auto;
-        /* color: #3c3f4d; */
         color: #000;
         font-size: 2.5rem;
         text-align: center;
@@ -106,5 +104,11 @@ export default Vue.extend({
         color: #000;
         font-size: 1.2rem;
         z-index: 2;
+    }
+    @media (min-width: 961px){
+        .tips {
+            background-size: cover;
+            background-clip: padding-box;
+        }
     }
 </style>

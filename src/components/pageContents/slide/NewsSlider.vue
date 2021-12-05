@@ -1,10 +1,10 @@
 <template>
     <div class="news-slider">
-        <Hooper :settings="hooperSettings" ref="slide" :style="heigthSetting">
+        <Hooper :settings="hooperSettings" :style="heigthSetting">
             <Slide v-for="item in items" :key="item.id">
                 <InfoCard  v-bind="GetInfoItem(item)" />
             </Slide>
-            <hooper-pagination slot="hooper-addons" v-show="!this.isSP"></hooper-pagination>
+            <HooperPagination slot="hooper-addons" v-show="!this.isSP"></HooperPagination>
         </Hooper>
     </div>
 </template>
@@ -14,7 +14,7 @@ import InfoCard from '../../atoms/InfoCard.vue'
 import { 
     Hooper, 
     Slide, 
-    Pagination as HooperPagination
+    Pagination as HooperPagination,
 } from 'hooper';
 import 'hooper/dist/hooper.css';
 export default Vue.extend({
@@ -26,12 +26,7 @@ export default Vue.extend({
                 vertical: true,
                 wheelControl: false,
                 breakpoints: {
-                    640: {
-                        itemsToShow: 1.5,
-                        centerMode: true,
-                        vertical: false,
-                    },
-                    690: {
+                    740: {
                         itemsToShow: 1.8,
                         centerMode: true,
                         vertical: false,

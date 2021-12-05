@@ -12,10 +12,10 @@
 import Vue from 'vue'
 import TipsAccordion from '../molecules/TipsAccordion.vue';
 export default Vue.extend({
-    props: ['items'],
     components: {
         TipsAccordion
-    }
+    },
+    props: ['items'],
 })
 </script>
 <style scoped>
