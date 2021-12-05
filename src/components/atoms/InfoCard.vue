@@ -18,7 +18,7 @@ export default Vue.extend({
         imgName: {
             type: String,
             required: false,
-            default: 'logo_black_pc.png'
+            default: 'contents/news/logo.png'
         },
         linkTo: {
             type: String,
@@ -61,7 +61,8 @@ export default Vue.extend({
         height: 125px;
         position: relative;
         overflow: hidden;
-        background-color: grey;
+        background-image: url(../../assets/images/contents/news/newsBg.png);
+        background-size: cover;
     }
     .thumbnailImg {
         position: absolute;
