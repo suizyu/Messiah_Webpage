@@ -1,5 +1,7 @@
 <template>
-    <fa :icon="GetIcon" class="sns-icon" />
+    <fa :icon="GetIcon"
+        :style="iconColor"
+        class="sns-icon" />
 </template>
 <script lang="ts">
 import Vue from 'vue'
@@ -24,13 +26,29 @@ export default Vue.extend({
             } else if (this.iconName == 'facebook') {
                 return faFacebookSquare;
             }
+        },
+        iconColor() {
+            let colorCode = "rgba(32, 32, 32)";
+            if (this.iconName == 'line') {
+                colorCode = "#06c755";
+            } else if (this.iconName == 'twitter') {
+                colorCode = "#1DA1F2";
+            } else if (this.iconName == 'facebook') {
+                colorCode = "#1877f2";
+            }
+            return { '--icolor' : colorCode }
         }
     }
 })
 </script>
 <style scoped>
     .sns-icon {
-        color: rgb(32, 32, 32);
+        --icolor: rgba(32, 32, 32);
+        color:  var(--icolor);
         font-size: 2.5rem;
+        transition: .3s;
+    }
+    .sns-icon:hover {
+        opacity: 0.5;
     }
 </style>
