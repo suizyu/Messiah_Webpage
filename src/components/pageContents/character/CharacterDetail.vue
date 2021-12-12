@@ -158,6 +158,7 @@ export default Vue.extend({
         }
         .decorate {
             right: 0;
+            opacity: .7;
         }
         .character-image {
             position: absolute;
