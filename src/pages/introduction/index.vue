@@ -20,7 +20,7 @@ import CustomSection from '../../components/atoms/CustomSection.vue'
 import ContentDiv from '../../components/atoms/ContentDiv.vue'
 import CustomH from '../../components/atoms/CustomH.vue'
 import KeywordTips from '../../components/organisms/KeywordTips.vue'
-import Story from '../../components/pageContents/Introduction/Story'
+import Story from '../../components/pageContents/Introduction/Story.vue'
 export default({
   layout: 'default',
   components: {
