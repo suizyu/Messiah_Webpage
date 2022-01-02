@@ -2,13 +2,9 @@
     <div class="container">
         <CustomSection>
             <CustomH :level=1 :decorate=true>Introduction</CustomH>
-            <section class="story">
+            <section>
                 <CustomH :level=2>Story</CustomH>
-                <ContentDiv>
-                    <p class="catchphrase">
-                        蒼の天蓋、灰の淵を越え、世界の果てへ――――
-                    </p>
-                </ContentDiv>
+                <Story />
             </section>
             <client-only>
                 <section class="keyword">
@@ -24,13 +20,15 @@ import CustomSection from '../../components/atoms/CustomSection.vue'
 import ContentDiv from '../../components/atoms/ContentDiv.vue'
 import CustomH from '../../components/atoms/CustomH.vue'
 import KeywordTips from '../../components/organisms/KeywordTips.vue'
+import Story from '../../components/pageContents/Introduction/Story'
 export default({
   layout: 'default',
   components: {
       CustomSection,
       ContentDiv,
       CustomH,
-      KeywordTips
+      KeywordTips,
+      Story
     },
     async asyncData({ $axios }) {
         try {
@@ -43,15 +41,3 @@ export default({
     }
 })
 </script>
-<style scoped>
-    .story,
-    .keyword {
-        margin: 0;
-    }
-    .catchphrase {
-        font-size: 2rem;
-    }
-    .story p {
-        color: #fff;
-    }
-</style>
