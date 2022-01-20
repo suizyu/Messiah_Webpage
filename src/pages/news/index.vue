@@ -4,8 +4,7 @@
             <CustomH :level=1 :decorate=true>News</CustomH>
             <div class="all-news">
                 <div v-for="item in items" :key="item.id">
-                    <InfoCard v-bind="GetInfoItem(item)" 
-                        class="news" />
+                    <InfoCard v-bind="GetInfoItem(item)" class="news" />
                 </div>
             </div>
         </CustomSection>
@@ -38,7 +37,7 @@ export default ({
                 imgName: item.thumbnail  || "logo_black_pc.png",
                 date: publishDateString,
                 title: item.title,
-                linkTo: "https://github.com/suizyu"
+                linkTo: item.url
             }
         },
         showInfoCard() {

@@ -44,23 +44,18 @@ export default ({
     width: 100%;
     margin-bottom: 5vh;
   }
-  /* .container {
-    background: linear-gradient(#0c2294 0%, #1f0358 100%);
-    background-attachment: fixed;
-    overflow: hidden;
-  } */
+  .container p,
+  .container dd,
+  .container dt {
+    font-family: serif;
+  }
   .container p {
     display: block;
     margin: 0 auto;
-    font-family: kinuta-maruminshinano-stdn, serif;
+    font-family: serif;
   }
   .container {
     overflow: hidden;
-    /* background: url(../assets/images/bg/french-stucco.png), 
-    linear-gradient(315deg, #1239a5, #2e0158);
-    background-repeat: repeat;
-    background-attachment: fixed;
-    background-blend-mode: color-burn; */
   }
   .wrap {
     margin: 0;
@@ -78,6 +73,6 @@ export default ({
    opacity: 0;
  }
  .page-enter-active {
-   transition: opacity 2s;
+   transition: opacity 3.5s;
  }
 </style>

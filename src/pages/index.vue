@@ -5,42 +5,37 @@
         </section>
         <CustomSection class="news">
             <CustomH v-bind="customHParams">News</CustomH>
-            <NewsSlider  :items="items" />
-            <DetailButton />
+            <NewsSlider :items="items" />
+            <DetailButton :link="'/news/'" />
         </CustomSection>
         <CustomSection class="introduction">
             <CustomH v-bind="customHParams">Introduction</CustomH>
-            <ContentDiv>
-                <p>
-                    なんかテキスト。
-                </p>
-                <div v-for="item in items" :key="item.id">
-                    {{item.title}}
-                    {{item.id}}
-                </div>
-                <p>なんかテキスト。</p>
-                <div v-for="tips in tipss" :key="tips.id">
-                    {{tips.title}} / {{tips.id}}
-                </div>
-            </ContentDiv>
+            <Stroy />
             <DetailButton :link="'/introduction/'" />
         </CustomSection>
         <CustomSection class="character">
             <CustomH v-bind="customHParams">Character</CustomH>
+            <CharacterAboutSlide />
+            <DetailButton :link="'/character/'" />
         </CustomSection>
         <CustomSection class="system">
             <CustomH v-bind="customHParams">System</CustomH>
             <section class="battle">
-                <ContentDiv>
+                <ContentDiv class="buttle-content">
                     <CustomH v-bind="customH2Params" class="battle-h2">
                         Battle
                     </CustomH>
                     <div class="buttle-discription">
                         <h3>砂漠の天候を見極めろ！</h3>
                         <p>
-                            砂漠の天候は千変万化！<br />
+                            砂漠の天候は千変万化！<br>
+                            戦闘を有利にも不利にも導きます。<br>
+                            <br>
+                            天候を支配、あるいは適応するかはあなた次第。<br>
+                            敵だけではない対峙と選択で戦略を組もう!<br>
+                            <br>
                         </p>
-                        <NewsSlider  :items="items" />
+                        <!-- <SingleSlide v-bind="garellyItems"/> -->
                     </div>
                     <DetailButton :disable=true :color="'#fff'" />
                 </ContentDiv>
@@ -53,15 +48,32 @@
     </div>
 </template>
 <script lang="ts">
-import CustomSection from '../components/atoms/CustomSection.vue';
-import ContentDiv from '../components/atoms/ContentDiv.vue';
-import CustomH from '../components/atoms/CustomH.vue';
-import DetailButton from '../components/atoms/DetailButton.vue';
-import NewsSlider from '../components/pageContents/slide/NewsSlider.vue';
-import TopCover from '../components/molecules/TopCover.vue';
+import CustomSection from '../components/atoms/CustomSection.vue'
+import ContentDiv from '../components/atoms/ContentDiv.vue'
+import CustomH from '../components/atoms/CustomH.vue'
+import TopCover from '../components/molecules/TopCover.vue'
+import DetailButton from '../components/atoms/DetailButton.vue'
+import GarellyImg from '../components/atoms/GarellyImg.vue'
+import NewsSlider from '../components/pageContents/slide/NewsSlider.vue'
+import SingleSlide from '../components/pageContents/slide/SingleSlide.vue'
 import ProdcutDiscription from '../components/pageContents/product/ProductDiscription.vue'
+import Stroy from '../components/pageContents/Introduction/Story.vue'
+import CharacterAboutSlide from '../components/pageContents/slide/CharacterAboutSlide.vue'
 export default({
     layout: 'default',
+    components: {
+        CustomSection,
+        ContentDiv,
+        CustomH,
+        TopCover,
+        DetailButton,
+        GarellyImg,
+        NewsSlider,
+        SingleSlide,
+        ProdcutDiscription,
+        Stroy,
+        CharacterAboutSlide
+    },
     data() {
         return {
         customHParams: {
@@ -73,18 +85,19 @@ export default({
             decorate: false,
             align: 'left'
         },
+        garellyItems: {
+            slideItems: [
+                {
+                    imgName: "logo_white_pc.png",
+                    section: "buttle",
+                    id: 0
+                }
+            ]
+        }
+        ,
         items: '',
         tipss: ''
         }
-    },
-    components: {
-        CustomSection,
-        ContentDiv,
-        CustomH,
-        DetailButton,
-        TopCover,
-        NewsSlider,
-        ProdcutDiscription,
     },
     async asyncData({ $axios }) {
         try {
@@ -104,17 +117,21 @@ export default({
 <style scoped>
     .battle {
         background: url(../assets/images/bg/buttle01.png) center center no-repeat;
+        background-size: cover;
         margin-top: 2vh;
     }
     .battle h2,
-    .battle h3 {
+    .battle h3,
+    .battle p  {
         text-align: left;
-        font-size: 2rem;
         margin: 2vh auto;
         color: #000;
     }
+    .battle h2,
+    .battle h3 {
+        font-size: 2rem;
+    }
     .battle p {
-        text-align: left;
-        color: #000;
+        font-size: 1.2rem;
     }
 </style>
