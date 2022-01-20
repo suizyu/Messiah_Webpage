@@ -12,7 +12,7 @@
                             class="logo" 
                             alt="最果てのメサイア" />
                     </li>
-                    <li v-for="m in menuItems" :key="m.id" @click="ClickedMenu" >
+                    <li v-for="m in menuItems" :key="m.id" @click="ClickedMenu" class="menu-item" >
                         <MenuLink :name="m.name" :link="m.link"/>
                     </li>
                 </ul>
@@ -123,7 +123,7 @@ export default Vue.extend({
     }
     .menu-list {
         list-style: none;
-        padding: 0;
+        padding: 10px;
         overflow: hidden;
     }
     .logo {
@@ -139,6 +139,10 @@ export default Vue.extend({
             text-align: left;
             display: block;
             margin: 0 auto;
+        }
+        .menu-item {
+            padding-left: 20px;
+            padding-bottom: 15px;
         }
         nav {
             display: flex;

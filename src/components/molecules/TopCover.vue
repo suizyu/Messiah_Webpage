@@ -32,7 +32,8 @@ export default Vue.extend({
   .top-info img {
     display: block;
     margin: 0 auto;
+    padding: 0 15px;
     width: 35vw;
-    min-width: 400px;
+    min-width: 360px;
   }
 </style>

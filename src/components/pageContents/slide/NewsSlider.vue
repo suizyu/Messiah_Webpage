@@ -1,10 +1,11 @@
 <template>
     <div class="news-slider">
-        <Hooper :settings="hooperSettings" :style="heigthSetting">
-            <Slide v-for="item in items" :key="item.id">
+        <Hooper :settings="hooperSettings" class="slide"> 
+            <Slide v-for="item in items" 
+                :key="item.id"
+                class="news-item">
                 <InfoCard  v-bind="GetInfoItem(item)" />
             </Slide>
-            <HooperPagination slot="hooper-addons" v-show="!this.isSP"></HooperPagination>
         </Hooper>
     </div>
 </template>
@@ -14,9 +15,8 @@ import InfoCard from '../../atoms/InfoCard.vue'
 import { 
     Hooper, 
     Slide, 
-    Pagination as HooperPagination,
-} from 'hooper';
-import 'hooper/dist/hooper.css';
+} from 'hooper'
+import 'hooper/dist/hooper.css'
 export default Vue.extend({
     props: ['items'],
     data() {
@@ -25,6 +25,8 @@ export default Vue.extend({
                 itemsToShow: 3,
                 vertical: true,
                 wheelControl: false,
+                centerMode: true,
+                initialSlide: 1,
                 breakpoints: {
                     740: {
                         itemsToShow: 1.8,
@@ -54,19 +56,8 @@ export default Vue.extend({
         InfoCard,
         Hooper,
         Slide,
-        HooperPagination,
-    },
-    mounted() {
-        this.$nextTick(() => {
-            window.addEventListener('resize', this.resizeEvent);
-            this.resizeEvent();
-        });
     },
     methods: {
-        resizeEvent() {
-                const matchSP = window.matchMedia('(max-width: 620px)').matches;
-                this.isSP = matchSP;
-        },
         GetInfoItem(item) {
             const publishDate = new Date(item.publishedAt);
             const year = publishDate.getFullYear();
@@ -77,14 +68,7 @@ export default Vue.extend({
                 imgName: item.thumbnail  || "logo_black_pc.png",
                 date: publishDateString,
                 title: item.title,
-                linkTo: "https://github.com/suizyu"
-            }
-        }
-    },
-    computed: {
-        heigthSetting() {
-            return {
-                "height": this.isSP ? "600px" : "200px"
+                linkTo: item.url
             }
         }
     },
@@ -95,10 +79,18 @@ export default Vue.extend({
 </script>
 <style scoped>
     .news-slider {
-        margin: 20px auto;
+        margin: 0 auto;
         width: 80vw;
+        max-width: 1600px;
     }
-    .hooper-pagination {
-        bottom: -20px;
+    @media(max-width: 740px) {
+        .slide {
+            height: 600px;
+        }
+    }
+    @media (min-width: 741px) {
+        .slide {
+            height: 200px;
+        }
     }
 </style>

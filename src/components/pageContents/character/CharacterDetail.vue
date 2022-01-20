@@ -119,12 +119,13 @@ export default Vue.extend({
     }
     .quote-box p {
         font-size: 2rem;
+        font-family: kinuta-maruminshinano-stdn, Helvetica, sans-serif;
         text-shadow: 0 3px 10px #333333;
         text-align: left;
     }
     .discription-box p {
         text-align: left;
-        font-size: 1.1rem;
+        font-size: 1.2rem;
     }
     @media (max-width: 960px) {
         .label {
@@ -150,7 +151,8 @@ export default Vue.extend({
     }
     @media (min-width: 961px) {
         .character {
-            height: 105vh;
+            height: 90vh;
+            max-height: 1000px;
             max-width: 1300px;
         }
         .label {
@@ -158,7 +160,7 @@ export default Vue.extend({
         }
         .decorate {
             right: 0;
-            opacity: .7;
+            opacity: .45;
         }
         .character-image {
             position: absolute;

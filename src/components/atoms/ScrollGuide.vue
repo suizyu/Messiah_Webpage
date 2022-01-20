@@ -26,7 +26,7 @@ export default Vue.extend({
     .scroll-guide {
         display: inline-block;
         position: absolute;
-        right:5%;
+        right: 6%;
         bottom: 0vh;
         height: 38vh;
         z-index: 3;
