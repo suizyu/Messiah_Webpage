@@ -1,5 +1,5 @@
 <template>
-    <a :href="linkTo" class="card" target="_blank">
+    <nuxt-link :to="linkTo" class="card" target="_self" :class="{'is-disabled': linkto ? true : false}">
         <div class="thumbnail">
             <img :src="imgPath(imgName)" class="thumbnailImg">
         </div>
@@ -7,7 +7,7 @@
             <span class="date">{{ date }}</span>
             <p>{{ title }}</p>
         </div>
-    </a>
+    </nuxt-link>
 </template>
 <script lang="ts">
 import Vue from 'vue'
@@ -23,7 +23,7 @@ export default Vue.extend({
         linkTo: {
             type: String,
             required: false,
-            default: "https://github.com/suizyu"
+            default: ""
         }
 
     },

@@ -5,7 +5,7 @@
         </h3>
         <section class="story-main">
             <p>
-                観測によって天候が左右される砂漠に囲まれた国、<br>
+                観測によって天候が左右される砂漠に囲まれた国、ミフターフ。<br>
                 王立観測院による都市の天候安定と、砂漠の部族・砂漠の外の平定を邁進する王国は繁栄の道を辿っていた。<br>
                 <br>
                 王都から王国の新領土たる灰の街を行き来する運び屋の少年エルヴィスはある夜、王都近郊に停泊中の馴染みの商船で過ごす中騒ぎの音を耳にする。<br>
@@ -42,7 +42,16 @@ export default Vue.extend({
         margin: 5vh auto;
     }
     .story-main p {
-        text-align: center;
         font-size: 1.2rem;
+    }
+    @media (max-width: 960px) {
+        .story-main p {
+            text-align: left;
+        }
+    }
+    @media (min-width: 961px) {
+        .story-main p {
+            text-align: center;
+        }
     }
 </style>

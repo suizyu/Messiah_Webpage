@@ -24,9 +24,9 @@ import {
     Hooper, 
     Slide, 
     Pagination as HooperPagination,
-} from 'hooper';
-import 'hooper/dist/hooper.css';
-import Tinybox from "vue-tinybox";
+} from 'hooper'
+import 'hooper/dist/hooper.css'
+import Tinybox from "vue-tinybox"
 export default Vue.extend({
     props: ['slideItems'],
     data() {

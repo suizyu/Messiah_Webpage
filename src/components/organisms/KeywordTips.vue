@@ -10,7 +10,7 @@
 </template>
 <script lang="ts">
 import Vue from 'vue'
-import TipsAccordion from '../molecules/TipsAccordion.vue';
+import TipsAccordion from '../molecules/TipsAccordion.vue'
 export default Vue.extend({
     components: {
         TipsAccordion

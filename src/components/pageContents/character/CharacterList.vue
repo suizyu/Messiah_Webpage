@@ -10,6 +10,8 @@
 <script lang="ts">
 import Vue from 'vue'
 import CharacterListItem from '../../atoms/CharacterListItem.vue'
+import characters from '~/assets/characters.json'
+export type Characters = typeof characters
 export default Vue.extend({
     components: {
         CharacterListItem
@@ -23,18 +25,7 @@ export default Vue.extend({
     },
     data() {
         return {
-            characters: [
-                {
-                    imgKey: "elvis",
-                    name: "エルヴィス",
-                    order: 0
-                },
-                {
-                    imgKey: "rih",
-                    name: "リーフ",
-                    order: 1
-                }
-            ]
+            characters: characters
         }
     },
     mounted() {

@@ -15,7 +15,7 @@
 </template>
 <script lang="ts">
 import Vue from 'vue'
-import Tinybox from "vue-tinybox";
+import Tinybox from "vue-tinybox"
 export default Vue.extend({
     components: {
         Tinybox

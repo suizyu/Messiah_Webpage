@@ -5,11 +5,11 @@
                 <small>※掲載されている画像はすべて開発中のものです。</small>
             </p>
             <SnsShare />
-            <img src="~/assets/images/logo_black_pc.png" 
-                alt="最果てのメサイア(ロゴ)" 
+            <img src="~/assets/images/corporate/logo.png" 
+                alt="Fluere Stars" 
                 class="corporate-logo" />
             <p class="footer-text">
-                <small>©2021 Fluere stars All rights reserved.</small>
+                <small>©2021 Fluere Stars All rights reserved.</small>
             </p>
         </ContentDiv>
     </footer>
@@ -36,7 +36,7 @@ export default Vue.extend({
     }
     .corporate-logo {
         height: 20vh;
-        max-height: 50px;
+        max-height: 25px;
         display: block;
         margin: 20px auto 10px;
     }

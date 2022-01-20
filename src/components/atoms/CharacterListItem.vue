@@ -1,7 +1,7 @@
 <template>
     <nuxt-link :to="toPath()" class="character-img">
         <img :src="imagePath()" 
-            :alt="this.imgKey" />
+            :alt="this.name" />
     </nuxt-link>
 </template>
 <script lang="ts">
