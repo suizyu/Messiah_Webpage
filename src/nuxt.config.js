@@ -2,7 +2,8 @@ export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   ssr: true,
   target: 'static' ,
-
+  assetsDir: './',
+  publicPath: './',
   head: {
     title: 'src',
     htmlAttrs: {
@@ -56,6 +57,16 @@ export default {
     apiKey: process.env.API_KEY,
     baseUrl: process.env.BASE_URL
   },
+  
+  router: {
+    extendRoutes (routes, resolve) {
+      routes.push({
+        name: 'custom',
+        path: '*',
+        component: resolve(__dirname, 'pages/404.vue')
+      })
+    }
+  },
 
   storybook: {
     // Options
@@ -74,5 +85,5 @@ export default {
       target: process.env.BASE_URL,
       pathRewrite: {'^/api/': '/'},
     }
-  }
+  },
 }
