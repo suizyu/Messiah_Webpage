@@ -54,7 +54,7 @@ export default Vue.extend({
 <style scoped>
     .tips {
         position: relative;
-        background-image: url(../../assets/images/bg/2544869.jpg);
+        background-image: url(../../assets/images/bg/old_paper.jpg);
         height: 95px;
         width: 100%;
         margin: 20px 0;

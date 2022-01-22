@@ -1,7 +1,7 @@
 <template>
     <div class="discriptions">
         <div class="logo-container">
-            <img src="~/assets/images/logo_white_pc.png" 
+            <img src="~/assets/images/logo_white.png" 
                 alt="最果てのメサイア"
                 class="logo">
         </div>

@@ -14,7 +14,7 @@ export const single_slide = Template.bind({})
 single_slide.args = {
     slideItems: [
         {
-            imgName: "logo_white_pc.png",
+            imgName: "logo_white.png",
             section: "buttle",
             id: 0
         }

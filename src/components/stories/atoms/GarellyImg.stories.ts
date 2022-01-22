@@ -12,6 +12,6 @@ const Template = (args: any, { argTypes }: any) => ({
 
 export const garelly_img = Template.bind({})
 garelly_img.args = {
-    imgName: "logo_white_pc.png",
+    imgName: "logo_white.png",
     contentSection: "buttle"
 }

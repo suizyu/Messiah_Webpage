@@ -8,7 +8,7 @@
             <nav>
                 <ul class="menu-list">
                     <li>
-                        <img src="~/assets/images/logo_white_pc.png" 
+                        <img src="~/assets/images/logo_white.png" 
                             class="logo" 
                             alt="最果てのメサイア" />
                     </li>

@@ -65,7 +65,7 @@ export default Vue.extend({
             const day = ("00" + (publishDate.getDate())).slice(-2);
             const publishDateString = year + "/" + month + "/" + day;
             return {
-                imgName: item.thumbnail  || "logo_black_pc.png",
+                imgName: item.thumbnail  || "logo_black.png",
                 date: publishDateString,
                 title: item.title,
                 linkTo: item.url

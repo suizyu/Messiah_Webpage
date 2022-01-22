@@ -24,7 +24,7 @@ export default Vue.extend({
         imgName: {
             type: String,
             required: true,
-            default: "logo_white_pc.png"
+            default: "logo_white.png"
         },
         section: {
             type: String,

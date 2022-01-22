@@ -88,7 +88,7 @@ export default({
         garellyItems: {
             slideItems: [
                 {
-                    imgName: "logo_white_pc.png",
+                    imgName: "logo_white.png",
                     section: "buttle",
                     id: 0
                 }
