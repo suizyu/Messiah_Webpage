@@ -4,14 +4,17 @@ export default Vue.component('custom-heading',{
     render: function(createElement) {
         return createElement(
             'h' + this.level,
-            { class: "custom-h"  },
+            { 
+                class: "custom-h",
+                style: this.alignStyle
+            },
             [
                 this.$slots.default, 
                 this.decorate ?
                     createElement(
                         'img', 
                         { 
-                            attrs: { src: require('../../assets/images/heading-border-pc.png') },
+                            attrs: { src: require('~/assets/images/heading-border.png') },
                             class:  "border-decorate"
                         }
                     ) :
@@ -28,6 +31,18 @@ export default Vue.component('custom-heading',{
             type: Boolean,
             default: false,
             required: false
+        },
+        align: {
+            type: String,
+            default: 'center',
+            required: false
+        }
+    },
+    computed: {
+        alignStyle() {
+            return {
+                '--align' : this.align
+            }
         }
     }
 })
@@ -40,14 +55,18 @@ export default Vue.component('custom-heading',{
         max-height: 45px;
     }
     .custom-h {
+        --align: 'center';
         color: white;
         font-family: classico-urw, sans-serif;
-        text-align: center;
+        text-align: var(--align);
+        font-size: 2.3em;
         position: relative;
+        margin: 10px 0;
     }
     img {
-        margin: 0 auto;
+        margin: 3px auto;
         position: absolute;
         bottom: 7px;
+        user-select: none;
     }
 </style>

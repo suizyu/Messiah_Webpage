@@ -1,29 +1,35 @@
 <template>
-    <a :href="linkTo" class="card" target="_blank">
+    <nuxt-link :to="linkTo" class="card" target="_self" :class="{'is-disabled': linkto ? true : false}">
         <div class="thumbnail">
             <img :src="imgPath(imgName)" class="thumbnailImg">
         </div>
         <div class="info">
-            <span class="date">2021/04/21</span>
-            <p>公式サイトオープン。</p>
+            <span class="date">{{ date }}</span>
+            <p>{{ title }}</p>
         </div>
-    </a>
+    </nuxt-link>
 </template>
 <script lang="ts">
 import Vue from 'vue'
 export default Vue.extend({
     props:{
-        imgName: String,
+        date: String,
+        title: String,
+        imgName: {
+            type: String,
+            required: false,
+            default: 'contents/news/logo.png'
+        },
         linkTo: {
             type: String,
-            default: "https://github.com/suizyu",
-            required: false
+            required: false,
+            default: ""
         }
 
     },
     methods: {
         imgPath(name: string) {
-            return require("../../assets/images/" + name);
+            return require("~/assets/images/" + name);
         }
     }
 })
@@ -33,10 +39,12 @@ export default Vue.extend({
         background-color: white;
         padding: 5px 10px;
         height: 55px;
+        text-align: left;
     }
     a.card {
         display: block;
         text-decoration: none;
+        margin: 0 auto;
     }
     .card {
         width: 300px;
@@ -44,7 +52,6 @@ export default Vue.extend({
     }
     .card p, .date {
         color: #3C3F4D;
-        text-align: left;
         margin: 0 auto;
     }
     .date  {
@@ -54,7 +61,8 @@ export default Vue.extend({
         height: 125px;
         position: relative;
         overflow: hidden;
-        background-color: grey;
+        background-image: url(../../assets/images/contents/news/newsBg.png);
+        background-size: cover;
     }
     .thumbnailImg {
         position: absolute;
@@ -63,7 +71,7 @@ export default Vue.extend({
         transition: all 0.5s;
     }
     .card:hover .thumbnailImg {
-        transform: scale(1.5, 1.5);
+        transform: scale(1.25, 1.25);
         transition: 0.5s all;
     }
 </style>

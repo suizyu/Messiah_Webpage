@@ -25,8 +25,8 @@ export default Vue.extend({
     props:{
         subTitle: {
             type: String,
-            default: "default Sub Title",
-            required: false
+            required: false,
+            default: "default Sub Title"
         }
     },
     data() {
@@ -54,10 +54,10 @@ export default Vue.extend({
 <style scoped>
     .tips {
         position: relative;
-        background-color: teal;
+        background-image: url(../../assets/images/bg/old_paper.jpg);
         height: 95px;
         width: 100%;
-        margin: 15px 0;
+        margin: 20px 0;
         padding: 5px;
         overflow: hidden;
         z-index: 1;
@@ -70,7 +70,7 @@ export default Vue.extend({
         top: -10px;
         left: 5px;
         color: transparent;
-        -webkit-text-stroke: 3px rgba(180, 180, 180, 0.383);
+        -webkit-text-stroke: 3px rgba(71, 19, 19, 0.157);
         font-size: 8rem;
         pointer-events: none;
         z-index: -1;
@@ -81,7 +81,7 @@ export default Vue.extend({
         height: 95px;
         line-height: 95px;
         margin: 0 auto;
-        color: white;
+        color: #000;
         font-size: 2.5rem;
         text-align: center;
         font-family: kinuta-maruminshinano-stdn, serif;
@@ -100,7 +100,15 @@ export default Vue.extend({
         margin: 0 auto;
         padding: 15px 0;
         width: 70vw;
-        max-width: 600px;
+        max-width: 750px;
+        color: #000;
+        font-size: 1.2rem;
         z-index: 2;
+    }
+    @media (min-width: 961px){
+        .tips {
+            background-size: cover;
+            background-clip: padding-box;
+        }
     }
 </style>

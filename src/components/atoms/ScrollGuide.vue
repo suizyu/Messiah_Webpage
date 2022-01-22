@@ -3,12 +3,16 @@
         <span>SCROLL</span>
     </div>
 </template>
+<script lang="ts">
+import Vue from 'vue'
+export default Vue.extend({
+})
+</script>
 <style scoped>
     .scroll-guide span {
         position: absolute;
         left: 2px;
         top: 1px;
-        bottom: 25vh;
         color: white;
         font-size: 0.7rem;
         font-family: kinuta-maruminshinano-stdn, serif;
@@ -22,9 +26,10 @@
     .scroll-guide {
         display: inline-block;
         position: absolute;
-        left:50%;
-        bottom: 0;
+        right: 6%;
+        bottom: 0vh;
         height: 38vh;
+        z-index: 3;
     }
     .scroll-guide::before {
         content: '';

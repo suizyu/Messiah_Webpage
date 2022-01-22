@@ -1,9 +1,13 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
+  ssr: true,
+  target: 'static' ,
+  assetsDir: './',
+  publicPath: './',
   head: {
     title: 'src',
     htmlAttrs: {
-      lang: 'en'
+      lang: 'ja'
     },
     meta: [
       { charset: 'utf-8' },
@@ -17,12 +21,16 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
-    'modern-css-reset'
+    'modern-css-reset',
+    '@fortawesome/fontawesome-svg-core/styles.css',
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-    { src: '~/plugins/typekit.js', mode: 'client'}
+    { src: '~/plugins/typekit.js', mode: 'client' },
+    { src: '~/plugins/fontAwesome.js', mode: 'client' },
+    { src: '~/plugins/tinybox.js', mode: 'client' },
+    { src: '~/plugins/axios.js' }
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -32,18 +40,50 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/typescript
     '@nuxt/typescript-build',
-    'vue-awesome-swiper'
+    //'vue-awesome-swiper'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    'nuxt-fontawesome',
+    '@nuxtjs/axios'
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
   },
+
+  privateRuntimeConfig: {
+    apiKey: process.env.API_KEY,
+    baseUrl: process.env.BASE_URL
+  },
   
+  router: {
+    extendRoutes (routes, resolve) {
+      routes.push({
+        name: 'custom',
+        path: '*',
+        component: resolve(__dirname, 'pages/404.vue')
+      })
+    }
+  },
+
   storybook: {
     // Options
-  }
+  },
+
+  fontawesome: {
+    component: 'fa'
+  },
+
+  axios: {
+    proxy: true
+  },
+
+  proxy: {
+    '/api/': {
+      target: process.env.BASE_URL,
+      pathRewrite: {'^/api/': '/'},
+    }
+  },
 }

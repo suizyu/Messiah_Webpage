@@ -1,0 +1,17 @@
+[
+    {
+        "id": 1,
+        "name": "line",
+        "url": "https://www.linebiz.com/jp/service/line-official-account/"
+    },
+    {
+        "id": 2,
+        "name": "twitter",
+        "url": "https://twitter.com/"
+    },
+    {
+        "id": 3,
+        "name": "facebook",
+        "url": "https://ja-jp.facebook.com/"
+    }
+]

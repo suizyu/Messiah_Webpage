@@ -2,22 +2,22 @@
     {
         "id": 1,
         "name": "Top",
-        "link": "https://t.co/rU7CADXhgD?amp=1"
+        "link": "/"
     },
     {
         "id": 2,
         "name": "News",
-        "link": ""
+        "link": "/news/"
     },
     {
         "id": 3,
         "name": "Introduction",
-        "link": ""
+        "link": "/introduction/"
     },
     {
         "id": 4,
-        "name": "Charactor",
-        "link": ""
+        "name": "Character",
+        "link": "/character/"
     },
     {
         "id": 5,
@@ -26,7 +26,12 @@
     },
     {
         "id": 6,
-        "name": "Spec",
+        "name": "Special",
         "link": ""
+    },
+    {
+        "id": 7,
+        "name": "Product",
+        "link": "/product/"
     }
 ]
