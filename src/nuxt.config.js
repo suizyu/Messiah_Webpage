@@ -29,7 +29,6 @@ export default {
   plugins: [
     { src: '~/plugins/typekit.js', mode: 'client' },
     { src: '~/plugins/fontAwesome.js', mode: 'client' },
-    { src: '~/plugins/tinybox.js', mode: 'client' },
     { src: '~/plugins/axios.js' }
   ],
 
