@@ -1,5 +1,5 @@
 <template>
-    <nuxt-link :to="linkTo" class="card" target="_self" :class="{'is-disabled': linkto ? true : false}">
+    <nuxt-link :to="linkTo" class="card" target="_self" :class="{ 'is-disabled': this.isLink }">
         <div class="thumbnail">
             <img :src="imgPath(imgName)" class="thumbnailImg">
         </div>
@@ -25,7 +25,14 @@ export default Vue.extend({
             required: false,
             default: ""
         }
-
+    },
+    data() {
+        return {
+            isLink: false
+        }
+    },
+    mounted() {
+        this.isLink = this.linkTo ? true : false;
     },
     methods: {
         imgPath(name: string) {

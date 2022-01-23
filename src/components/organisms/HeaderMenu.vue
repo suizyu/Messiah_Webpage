@@ -47,9 +47,12 @@ export default Vue.extend({
         });
     },
     methods: {
+        refs(): any {
+            return this.$refs;
+        },
         resizeEvent() {
                 const matchSP = window.matchMedia('(max-width: 960px)').matches;
-                const menu = this.$refs.menu;
+                const menu = this.refs().menu;
                 if (!matchSP) {
                     this.isSP = false;
                     gsap.set(menu, { visibility: 'visible' });
@@ -66,11 +69,11 @@ export default Vue.extend({
         },
         setChildData(isBtnOpen: boolean) {
             this.isOpenMenu = isBtnOpen;
-            const menu = this.$refs.menu;
+            const menu = this.refs().menu;
             gsap.set(menu, { visibility: 'visible' });
         },
         changeSPMenuState() {
-            const menu = this.$refs.menu;
+            const menu = this.refs().menu;
             if (this.isOpenMenu) {
                 gsap.to(menu, { left: '0', duration: 0.3 });
             } else {
@@ -81,13 +84,13 @@ export default Vue.extend({
             console.log("click MenuLink!")
             if (this.isSP) {
                 this.isOpenMenu = false;
-                this.$refs.hamburgerBtn.btnClick();
+                this.refs().hamburgerBtn.btnClick();
             }
         }
     },
     watch: {
         isOpenMenu: function(val, oldVal) {
-            const menu = this.$refs.menu;
+            const menu = this.refs().menu;
             gsap.set(menu, { visibility: 'visible' });
             this.changeSPMenuState();
         }

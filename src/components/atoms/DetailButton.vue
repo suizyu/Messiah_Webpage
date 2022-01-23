@@ -11,6 +11,9 @@
 </template>
 <script lang="ts">
 import Vue from 'vue'
+interface BtnProps {
+    buttonText: String
+}
 export default Vue.extend({
     props: {
         link: {
@@ -29,7 +32,7 @@ export default Vue.extend({
             default: "#b0a200"
         }
     },
-    data() {
+    data(): BtnProps {
         return {
             buttonText: ""
         }
@@ -42,7 +45,7 @@ export default Vue.extend({
         }
     },
     methods: {
-        isInternal(link) {
+        isInternal(link: string) {
             return link ? !/^https?:\/\//.test(link) : false;
         }
     },

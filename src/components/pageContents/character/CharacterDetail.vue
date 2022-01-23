@@ -58,7 +58,7 @@ export default Vue.extend({
                 name: "",
                 spelling: "",
                 voiceActor: "",
-                border: null
+                border: true
             }
         }
     },
@@ -66,7 +66,7 @@ export default Vue.extend({
         this.bindData = {
             name: this.name,
             spelling: this.spelling,
-            vocieActor: this.voiceActor,
+            voiceActor: this.voiceActor,
             border: this.border
         };
 
