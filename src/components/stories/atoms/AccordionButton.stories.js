@@ -4,7 +4,7 @@ export default {
     title: "atoms/AccordionButton",
 }
 
-const Template = (args: any, { argTypes }: any) => ({
+const Template = (args, { argTypes }) => ({
     props: Object.keys(argTypes),
     components: { AccordionButton },
     template: `<AccordionButton v-bind="$props" />`

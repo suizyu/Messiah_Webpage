@@ -4,7 +4,7 @@ export default {
     title: "atoms/DetailButton",
 }
 
-const Template = (args: any, { argTypes }: any) => ({
+const Template = (args, { argTypes }) => ({
     props: Object.keys(argTypes),
     components: { DetailButton },
     template: '<DetailButton v-bind="$props" />'

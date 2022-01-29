@@ -5,7 +5,7 @@ export default {
     component: SnsIcon
 }
 
-const Template = (args: any, { argTypes }: any) => ({
+const Template = (args, { argTypes }) => ({
     props: Object.keys(argTypes),
     components: { SnsIcon },
     template: `<SnsIcon v-bind="$props" />`

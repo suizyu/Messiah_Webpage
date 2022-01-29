@@ -4,7 +4,7 @@ export default {
     title: "atoms/CharacterLabel",
 }
 
-const Template = (args: any, { argTypes }: any) => ({
+const Template = (args, { argTypes }) => ({
     props: Object.keys(argTypes),
     components: { CharacterLabel },
     template: `<CharacterLabel v-bind="$props" />`

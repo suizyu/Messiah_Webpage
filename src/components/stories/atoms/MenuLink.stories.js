@@ -5,7 +5,7 @@ export default {
     component: MenuLink
 }
 
-const Template = (args: any, { argTypes }: any) => ({
+const Template = (args, { argTypes }) => ({
     props: Object.keys(argTypes),
     components: { MenuLink },
     template: `<MenuLink v-bind="$props" />`

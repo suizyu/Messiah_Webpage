@@ -4,7 +4,7 @@ export default {
     title: "atoms/CharacterListItem",
 }
 
-const Template = (args: any, { argTypes }: any) => ({
+const Template = (args, { argTypes }) => ({
     props: Object.keys(argTypes),
     components: { CharacterListItem },
     template: `<CharacterListItem v-bind="$props" />`
