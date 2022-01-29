@@ -1,6 +1,5 @@
 <template>
-    <figure class="character-about" 
-            :style="background">
+    <figure class="character-about">
             <img :src="imagePath()" 
                 :alt="this.name"
                 class="character" />

@@ -17,6 +17,13 @@ import {
     Slide, 
 } from 'hooper'
 import 'hooper/dist/hooper.css'
+interface PropItem {
+    id: String
+    title: String
+    thumbnail: String
+    url: String
+    publishedAt: Date
+}
 export default Vue.extend({
     props: ['items'],
     data() {
@@ -58,7 +65,7 @@ export default Vue.extend({
         Slide,
     },
     methods: {
-        GetInfoItem(item) {
+        GetInfoItem(item: PropItem) {
             const publishDate = new Date(item.publishedAt);
             const year = publishDate.getFullYear();
             const month = ("00" + (publishDate.getMonth() + 1)).slice(-2);
@@ -71,9 +78,6 @@ export default Vue.extend({
                 linkTo: item.url
             }
         }
-    },
-    destroyed() {
-        window.removeEventListener('resize', this.resizeEvent)
     }
 })
 </script>

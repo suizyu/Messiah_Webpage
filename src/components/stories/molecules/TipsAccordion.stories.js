@@ -9,7 +9,7 @@ export const Empty = () => ({
     template: "<TipsAccordion />"
 })
 
-const Sample = (args: any, { argTypes }: any) => ({
+const Sample = (args, { argTypes }) => ({
     props: Object.keys(argTypes),
     components: { TipsAccordion },
     template: `<TipsAccordion  v-bind="$props"> <template #summary>最果て</template> <template #detailText>砂漠に住む人云々。</template><TipsAccordion />`

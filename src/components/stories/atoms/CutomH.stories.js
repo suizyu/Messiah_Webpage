@@ -4,7 +4,7 @@ export default {
     title: "atoms/CustomH",
 }
 
-const Template = (args: any, { argTypes }: any) => ({
+const Template = (args, { argTypes }) => ({
     props: Object.keys(argTypes),
     components: { CustomH },
     template: `<CustomH v-bind="$props"> Title </CustomH>`

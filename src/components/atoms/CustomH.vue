@@ -6,7 +6,7 @@ export default Vue.component('custom-heading',{
             'h' + this.level,
             { 
                 class: "custom-h",
-                style: this.alignStyle
+                style: { '--align' : this.align }
             },
             [
                 this.$slots.default, 
@@ -36,13 +36,6 @@ export default Vue.component('custom-heading',{
             type: String,
             default: 'center',
             required: false
-        }
-    },
-    computed: {
-        alignStyle() {
-            return {
-                '--align' : this.align
-            }
         }
     }
 })

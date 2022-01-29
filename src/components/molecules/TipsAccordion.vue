@@ -39,9 +39,12 @@ export default Vue.extend({
         root.setAttribute('sub-title', this.subTitle);
     },
     methods: {
+        refs(): any{
+            return this.$refs;
+        },
         stateChange() {
             this.isOpen = !this.isOpen;
-            const target = this.$refs.tips;
+            const target = this.refs().tips;
             if (this.isOpen) {
                 gsap.to(target, { height: 'auto', duration: 0.5 });
             } else {

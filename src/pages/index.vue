@@ -35,7 +35,6 @@
                             敵だけではない対峙と選択で戦略を組もう!<br>
                             <br>
                         </p>
-                        <!-- <SingleSlide v-bind="garellyItems"/> -->
                     </div>
                     <DetailButton :disable=true :color="'#fff'" />
                 </ContentDiv>
@@ -53,9 +52,7 @@ import ContentDiv from '../components/atoms/ContentDiv.vue'
 import CustomH from '../components/atoms/CustomH.vue'
 import TopCover from '../components/molecules/TopCover.vue'
 import DetailButton from '../components/atoms/DetailButton.vue'
-import GarellyImg from '../components/atoms/GarellyImg.vue'
 import NewsSlider from '../components/pageContents/slide/NewsSlider.vue'
-import SingleSlide from '../components/pageContents/slide/SingleSlide.vue'
 import ProdcutDiscription from '../components/pageContents/product/ProductDiscription.vue'
 import Stroy from '../components/pageContents/Introduction/Story.vue'
 import CharacterAboutSlide from '../components/pageContents/slide/CharacterAboutSlide.vue'
@@ -67,9 +64,7 @@ export default({
         CustomH,
         TopCover,
         DetailButton,
-        GarellyImg,
         NewsSlider,
-        SingleSlide,
         ProdcutDiscription,
         Stroy,
         CharacterAboutSlide

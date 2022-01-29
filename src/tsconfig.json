@@ -41,6 +41,7 @@
     "layouts/**/*.ts",
     "layouts/**/*.vue",
     "pages/**/*.ts",
+    "./types/"
   ],
   "exclude": [
     "node_modules",
