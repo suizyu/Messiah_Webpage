@@ -151,12 +151,11 @@ export default Vue.extend({
     }
     @media (min-width: 961px) {
         .character {
-            height: 90vh;
-            max-height: 1000px;
+            height: 1000px;
             max-width: 1300px;
         }
         .label {
-            top: 35vh;
+            top: 30%;
         }
         .decorate {
             right: 0;
@@ -182,7 +181,7 @@ export default Vue.extend({
         .discription-box {
             position: absolute;
             left: 0;
-            top: 52vh;
+            top: 45%;
             width: 55%;
             z-index: 5;
         }
