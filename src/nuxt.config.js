@@ -29,7 +29,6 @@ export default {
   plugins: [
     { src: '~/plugins/typekit.js', mode: 'client' },
     { src: '~/plugins/fontAwesome.js', mode: 'client' },
-    { src: '~/plugins/axios.js' }
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -39,13 +38,12 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/typescript
     '@nuxt/typescript-build',
-    //'vue-awesome-swiper'
+    'nuxt-microcms-module',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     'nuxt-fontawesome',
-    '@nuxtjs/axios'
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
@@ -54,13 +52,13 @@ export default {
 
   privateRuntimeConfig: {
     apiKey: process.env.API_KEY,
-    baseUrl: process.env.BASE_URL
+    serviceDomain: process.env.SERVICE_DOMAIN,
   },
 
   // Netlify
   env: {
     apiKey: process.env.API_KEY,
-    baseUrl: process.env.BASE_URL
+    serviceDomain: process.env.SERVICE_DOMAIN,
   },
   
   router: {
@@ -81,14 +79,11 @@ export default {
     component: 'fa'
   },
 
-  axios: {
-    proxy: true
-  },
-
-  proxy: {
-    '/api/': {
-      target: process.env.BASE_URL,
-      pathRewrite: {'^/api/': '/'},
-    }
-  },
+  microcms: {
+    options: {
+      serviceDomain: process.env.SERVICE_DOMAIN,
+      apiKey: process.env.API_KEY,
+    },
+    mode:'all',
+  }
 }

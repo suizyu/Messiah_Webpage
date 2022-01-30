@@ -54,14 +54,9 @@ export default ({
             })
         }
     },
-    async asyncData({ $axios }) {
-        try {
-            const { contents } = await $axios.$get('/api/news');
-            return { items: contents };
-        }
-        catch(error) {
-            console.log(error);
-        }
+    async asyncData({ $microcms }) {
+        const { contents } = await $microcms.get({ endpoint: 'news'});
+        return { items: contents };
     }
 })
 </script>

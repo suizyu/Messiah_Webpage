@@ -91,21 +91,11 @@ export default({
         }
         ,
         items: '',
-        tipss: ''
         }
     },
-    async asyncData({ $axios }) {
-        try {
-            const topNews = await $axios.get( '/api/news');
-            const tipss = await $axios.get('/api/keyword');
-            return {
-                items: topNews.data.contents,
-                tipss: tipss.data.contents
-            }
-        }
-        catch(error) {
-            console.log(error);
-        }
+    async asyncData({ $microcms }) {
+        const { contents } = await $microcms.get({ endpoint: 'news' });
+        return { items: contents };
     }
 })
 </script>
