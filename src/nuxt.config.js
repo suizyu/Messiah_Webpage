@@ -56,6 +56,12 @@ export default {
     apiKey: process.env.API_KEY,
     baseUrl: process.env.BASE_URL
   },
+
+  // Netlify
+  env: {
+    apiKey: process.env.API_KEY,
+    baseUrl: process.env.BASE_URL
+  },
   
   router: {
     extendRoutes (routes, resolve) {
