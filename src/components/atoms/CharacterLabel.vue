@@ -46,9 +46,9 @@ export default Vue.extend({
         overflow: hidden;
     }
     .character-label hr {
-        border-width: 1px;
-        border-style: solid;
-        border-color: #fff;
+        border: none;
+        height: 1px;
+        background: linear-gradient(90deg, hsl(0, 0%, 100%), hsla(0, 0%, 100%, 0));
         margin: 0;
     }
     .name-block {
