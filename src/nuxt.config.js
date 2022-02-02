@@ -1,11 +1,10 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
-  ssr: true,
   target: 'static' ,
   assetsDir: './',
   publicPath: './',
   head: {
-    title: 'src',
+    title: '最果てのメサイア 公式サイト',
     htmlAttrs: {
       lang: 'ja'
     },
