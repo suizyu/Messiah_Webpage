@@ -32,7 +32,7 @@ export default Vue.extend({
         z-index: 3;
     }
     .scroll-guide::before {
-        content: '';
+        content: "";
         position: absolute;
         width: 1px;
         height: 38vh;
