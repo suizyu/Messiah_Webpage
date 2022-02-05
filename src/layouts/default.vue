@@ -1,6 +1,7 @@
 <template>
   <transition name="page">
     <div class="wrap">
+      <LoadingScreen :isLoading="isLoading" />
       <HeaderMenu />
       <Nuxt />
       <Footer />
@@ -8,14 +9,30 @@
   </transition>
 </template>
 <script lang="ts">
-import HeaderMenu from '../components/organisms/HeaderMenu.vue';
-import Footer from '../components/organisms/Footer.vue';
-export default ({
+import HeaderMenu from '../components/organisms/HeaderMenu.vue'
+import Footer from '../components/organisms/Footer.vue'
+import LoadingScreen from '../components/molecules/LoadingScreen.vue'
+import Vue from 'vue'
+export default Vue.extend({
   name: 'default',
   components: {
     HeaderMenu,
-    Footer
-  }
+    Footer,
+    LoadingScreen
+  },
+  data() {
+    return {
+      isLoading: true
+    }
+  },
+  mounted() {
+    let self = this;
+    Vue.nextTick(() => {
+        setTimeout(() =>  {
+            self.isLoading = false;
+        }, 1000)
+    })
+  },
 })
 </script>
 <style>
@@ -69,10 +86,10 @@ export default ({
   img {
       user-select: none;
   }
- .page-enter {
+  .page-enter {
    opacity: 0;
- }
- .page-enter-active {
-   transition: opacity 3.5s;
- }
+  }
+  .page-enter-active {
+    transition: opacity 3.5s;
+  }
 </style>
