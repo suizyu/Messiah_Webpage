@@ -109,11 +109,14 @@ export default({
     .battle p  {
         text-align: left;
         margin: 2vh auto;
-        color: #000;
+        color: #3c3f4d;
     }
     .battle h2,
     .battle h3 {
         font-size: 2rem;
+    }
+    .battle h3 {
+        font-family: kinuta-maruminshinano-stdn, serif;
     }
     .battle p {
         font-size: 1.2rem;

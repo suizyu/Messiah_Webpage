@@ -41,7 +41,6 @@ export default Vue.extend({
     .character-label {
         position: relative;
         width: 100%;
-        color: #fff;
         text-align: left;
         overflow: hidden;
     }

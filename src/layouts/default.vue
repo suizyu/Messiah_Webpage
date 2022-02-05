@@ -3,7 +3,7 @@
     <div class="wrap">
       <LoadingScreen :isLoading="isLoading" />
       <HeaderMenu />
-      <Nuxt />
+      <Nuxt class="contents" />
       <Footer />
     </div>
   </transition>
@@ -38,16 +38,7 @@ export default Vue.extend({
 <style>
   * {
     text-decoration: none;
-    font-family:
-      kinuta-maruminshinano-stdn,
-      'Source Sans Pro',
-      -apple-system,
-      BlinkMacSystemFont,
-      'Segoe UI',
-      Roboto,
-      'Helvetica Neue',
-      Arial,
-      sans-serif;
+    font-family: serif;
     font-style: normal;
     text-decoration: none;
     word-spacing: 1px;
@@ -77,14 +68,16 @@ export default Vue.extend({
   .wrap {
     margin: 0;
     padding: 0;
-    background: url(../assets/images/bg/french-stucco.png), 
-    linear-gradient(315deg, #1239a5, #2e0158);
+    background: url(../assets/images/bg/french-stucco.png), linear-gradient(315deg, #1239a5, #2e0158);
     background-repeat: repeat;
     background-attachment: fixed;
     background-blend-mode: color-burn;
   }
   img {
       user-select: none;
+  }
+  .contents {
+    color: #ededec;
   }
   .page-enter {
    opacity: 0;

@@ -1,7 +1,7 @@
 <template>
     <ContentDiv class="story">
         <h3 class="catchphrase">
-            蒼の天蓋、灰の淵を越え、世界の果てへ――――
+            蒼の天蓋、灰の淵を越え、世界の果てへ
         </h3>
         <section class="story-main">
             <p>
@@ -35,10 +35,10 @@ export default Vue.extend({
     }
     .catchphrase {
         font-size: 2rem;
+        font-family: kinuta-maruminshinano-stdn, serif;
     }
     .story p,
     .story h3 {
-        color: #fff;
         margin: 5vh auto;
     }
     .story-main p {

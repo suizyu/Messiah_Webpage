@@ -90,9 +90,6 @@ export default Vue.extend({
 })
 </script>
 <style scoped>
-    p {
-        color: #FFF;
-    }
     .character {
         position: relative;
         overflow: visible;
@@ -120,7 +117,7 @@ export default Vue.extend({
     .quote-box p {
         font-size: 2rem;
         font-family: kinuta-maruminshinano-stdn, Helvetica, sans-serif;
-        text-shadow: 0 3px 10px #333333;
+        text-shadow: 0 3px 10px #333;
         text-align: left;
     }
     .discription-box p {
