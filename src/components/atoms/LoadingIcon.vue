@@ -33,6 +33,7 @@ export default Vue.extend({
         margin-top: 95px;
         text-align: center;
         font-weight: bold;
+        font-family: sans-serif;
         color: #ffffff;
         opacity: 0;
         text-transform: uppercase;
