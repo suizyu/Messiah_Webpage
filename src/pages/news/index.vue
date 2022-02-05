@@ -23,7 +23,11 @@ export default ({
         InfoCard
     },
     mounted() {
-        this.showInfoCard();
+        this.$nextTick(() => {
+            setTimeout(() => {
+                this.showInfoCard()
+            }, 800)
+        });
     },
     methods: {
         GetInfoItem(item) {
@@ -62,6 +66,7 @@ export default ({
 </script>
 <style scoped>
     .all-news a {
+        display: block;
         margin: 25px;
     }
     .news {
@@ -70,7 +75,6 @@ export default ({
     }
     @media (max-width: 960px) {
         .all-news a {
-            display: block;
             margin : 30px auto;
         }
     }
