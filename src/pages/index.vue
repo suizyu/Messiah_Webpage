@@ -71,26 +71,25 @@ export default({
     },
     data() {
         return {
-        customHParams: {
-            level: 1,
-            decorate: true
-        },
-        customH2Params: {
-            level: 2,
-            decorate: false,
-            align: 'left'
-        },
-        garellyItems: {
-            slideItems: [
-                {
-                    imgName: "logo_white.png",
-                    section: "buttle",
-                    id: 0
-                }
-            ]
-        }
-        ,
-        items: '',
+            customHParams: {
+                level: 1,
+                decorate: true
+            },
+            customH2Params: {
+                level: 2,
+                decorate: false,
+                align: 'left'
+            },
+            garellyItems: {
+                slideItems: [
+                    {
+                        imgName: "logo_white.png",
+                        section: "buttle",
+                        id: 0
+                    }
+                ]
+            },
+            items: '',
         }
     },
     async asyncData({ $microcms }) {
