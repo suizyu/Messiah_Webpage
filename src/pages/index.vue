@@ -100,7 +100,7 @@ export default({
 </script>
 <style scoped>
     .battle {
-        background: url(../assets/images/bg/buttle01.png) center center no-repeat;
+        background: linear-gradient(to right, rgba(198, 255, 221, 0.3), rgb(251, 215, 134, 0.3), rgb(247, 121, 125, 0.3)), url(../assets/images/bg/buttle01.png) center center no-repeat;
         background-size: cover;
         margin-top: 2vh;
     }
@@ -109,7 +109,7 @@ export default({
     .battle p  {
         text-align: left;
         margin: 2vh auto;
-        color: #3c3f4d;
+        color: #333;
     }
     .battle h2,
     .battle h3 {

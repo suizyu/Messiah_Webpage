@@ -73,7 +73,7 @@ export default Vue.extend({
         top: -10px;
         left: 5px;
         color: transparent;
-        -webkit-text-stroke: 3px rgba(71, 19, 19, 0.157);
+        -webkit-text-stroke: 3px rgba(97, 40, 7, 0.205);
         font-size: 8rem;
         pointer-events: none;
         z-index: -1;
