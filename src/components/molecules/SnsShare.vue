@@ -2,9 +2,9 @@
     <section class="sns-share">
         <CustomH :level="1">Share</CustomH>
         <div class="iconbox">
-            <a v-for="s in snsInfos" :key="s.id" :href="s.url" target="_blank">
-                <SnsIcon :iconName="s.name" class="icon"/>
-            </a>
+            <template v-for="s in snsInfos">
+                <SnsIcon :iconName="s.name" :key="s.id"  class="icon"/>
+            </template>
         </div>
     </section>
 </template>
@@ -41,5 +41,8 @@ export default Vue.extend({
     }
     h1.custom-h {
         font-size: 1.5rem;
+    }
+    .icon:hover {
+        cursor: pointer;
     }
 </style>
