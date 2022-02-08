@@ -1,8 +1,10 @@
 <template>
-    <div class="hmg-btn" @click="btnClick" :class="{active: isOpen}">
-        <span></span>
-        <span></span>
-        <span></span>
+    <div>
+        <div class="hmg-btn" @click="btnClick" :class="{active: isOpen}">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </div>
 </template>
 <script lang="ts">
