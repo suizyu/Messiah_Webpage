@@ -28,8 +28,8 @@ export default Vue.extend({
     },
     methods: {
       resizeEvent(): void {
-        if (this.lastInnerHeight != window.innerHeight) {
-          this.lastInnerHeight = window.innerHeight
+        if (this.lastInnerHeight != window.innerWidth) {
+          this.lastInnerHeight = window.innerWidth
           this.innerHeight = window.innerHeight + "px"
         }
       }
@@ -42,8 +42,10 @@ export default Vue.extend({
 <style scoped>
   .top-cover {
       --innerHeight: 100vh;
+      position: relative;
       margin: 0;
       height: var(--innerHeight);
+      widows: 100%;
       background: url(../../assets/images/bg/sky01.png) center center no-repeat;
       background-size: cover;
       z-index: 1;
