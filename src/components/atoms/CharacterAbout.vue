@@ -64,12 +64,21 @@ export default Vue.extend({
     }
     .name {
         bottom: 75%;
-        font-size: 3.25rem;
         font-family: kinuta-maruminshinano-stdn, serif;
         font-feature-settings: "palt";
         z-index: 1;
     }
     .description {
-        font-size: 1.25rem;
+        font-size: 1.2rem;
+    }
+    @media (max-width: 960px) {
+        .name {
+            font-size: 3rem;
+        }
+    }
+    @media (min-width: 961px) {
+        .name {
+            font-size: 3.25rem;
+        }
     }
 </style>

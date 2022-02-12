@@ -31,8 +31,6 @@ export default Vue.extend({
                 itemsToShow: 1,
                 wheelControl: false,
                 infiniteScroll: true,
-                autoPlay: true,
-                playSpeed: 5000
             }
         }
     },
@@ -47,7 +45,7 @@ export default Vue.extend({
 </script>
 <style scoped>
     .character-about-slide{
-        height: 70vh;
+        height: 60vh;
         margin: 5vh auto;
         overflow: visible;
     }
