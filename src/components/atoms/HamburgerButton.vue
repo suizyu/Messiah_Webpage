@@ -20,16 +20,16 @@ export default Vue.extend({
     },
     methods: {
         btnStateChange() {
-            const isBtnOpen = this.isOpen;
-            this.$emit('btnStateChange', isBtnOpen);
+            const isBtnOpen = this.isOpen
+            this.$emit('btnStateChange', isBtnOpen)
         },
         btnClick() {
-            this.isOpen = !this.isOpen;
+            this.isOpen = !this.isOpen
         }
     },
     watch: {
         isOpen: function(val, oldVal) {
-            this.btnStateChange();
+            this.btnStateChange()
         }
     }
 })

@@ -31,8 +31,8 @@ export default({
       Story
     },
     async asyncData({ $microcms }) {
-        const { contents } = await $microcms.get({ endpoint: 'keyword' });
-        return { items: contents };
+        const { contents } = await $microcms.get({ endpoint: 'keyword' })
+        return { items: contents }
     }
 })
 </script>

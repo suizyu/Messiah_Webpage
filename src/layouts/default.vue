@@ -26,10 +26,10 @@ export default Vue.extend({
     }
   },
   mounted() {
-    let self = this;
+    let self = this
     Vue.nextTick(() => {
         setTimeout(() =>  {
-            self.isLoading = false;
+            self.isLoading = false
         }, 1000)
     })
   },

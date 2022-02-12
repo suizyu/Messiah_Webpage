@@ -21,10 +21,10 @@ export default Vue.extend({
     },
     methods: {
         imagePath() {
-            return require(`~/assets/images/character/_list/${ this.imgKey }.png`);
+            return require(`~/assets/images/character/_list/${ this.imgKey }.png`)
         },
         toPath() {
-            return "/character/" + this.imgKey;
+            return "/character/" + this.imgKey
         }
     }
 })

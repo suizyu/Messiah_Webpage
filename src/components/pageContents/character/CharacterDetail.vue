@@ -68,20 +68,20 @@ export default Vue.extend({
             spelling: this.spelling,
             voiceActor: this.voiceActor,
             border: this.border
-        };
+        }
 
         this.$nextTick(() => {
-            window.addEventListener('resize', this.resizeEvent);
-            this.resizeEvent();
-        });
+            window.addEventListener('resize', this.resizeEvent)
+            this.resizeEvent()
+        })
     },
     methods: {
         resizeEvent() {
-            const matchSP = window.matchMedia('(max-width: 960px)').matches;
-            this.isSP = matchSP;
+            const matchSP = window.matchMedia('(max-width: 960px)').matches
+            this.isSP = matchSP
         },
         getImagePath() {
-            return require(`~/assets/images/character/${ this.imgKey }/${ this.imgKey }.png`);
+            return require(`~/assets/images/character/${ this.imgKey }/${ this.imgKey }.png`)
         }
     },
     destroyed() {

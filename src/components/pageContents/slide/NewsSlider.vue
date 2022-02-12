@@ -66,11 +66,11 @@ export default Vue.extend({
     },
     methods: {
         GetInfoItem(item: PropItem) {
-            const publishDate = new Date(item.publishedAt);
-            const year = publishDate.getFullYear();
-            const month = ("00" + (publishDate.getMonth() + 1)).slice(-2);
-            const day = ("00" + (publishDate.getDate())).slice(-2);
-            const publishDateString = year + "/" + month + "/" + day;
+            const publishDate = new Date(item.publishedAt)
+            const year = publishDate.getFullYear()
+            const month = ("00" + (publishDate.getMonth() + 1)).slice(-2)
+            const day = ("00" + (publishDate.getDate())).slice(-2)
+            const publishDateString = year + "/" + month + "/" + day
             return {
                 imgName: item.thumbnail  || "logo_black.png",
                 date: publishDateString,

@@ -46,11 +46,11 @@ export default Vue.extend({
     },
     methods: {
         isInternal(link: string) {
-            return link ? !/^https?:\/\//.test(link) : false;
+            return link ? !/^https?:\/\//.test(link) : false
         }
     },
     mounted() {
-        this.buttonText = this.disable ? 'Comming Soon...' : 'More';
+        this.buttonText = this.disable ? 'Comming Soon...' : 'More'
     }
 })
 </script>

@@ -34,11 +34,11 @@ export default Vue.extend({
         }
     },
     mounted() {
-        this.isLink = this.linkTo ? true : false;
+        this.isLink = this.linkTo ? true : false
     },
     methods: {
         imgPath(name: string) {
-            return require("~/assets/images/" + name);
+            return require("~/assets/images/" + name)
         }
     }
 })

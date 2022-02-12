@@ -31,25 +31,25 @@ export default Vue.extend({
         }
     },
     mounted() {
-        this.openBtn = this.refs().open;
-        this.closeBtn = this.refs().closet;
-        const target = this.state ? this.closeBtn : this.openBtn;
-        gsap.to(target, { opacity: 1 });
+        this.openBtn = this.refs().open
+        this.closeBtn = this.refs().closet
+        const target = this.state ? this.closeBtn : this.openBtn
+        gsap.to(target, { opacity: 1 })
     },
     watch: {
         state: function (val, oldVal) {
-            const timeline = gsap.timeline();
-            this.openBtn = this.refs().open;
-            this.closeBtn = this.refs().close;
-            const fromTarget = val ? this.openBtn : this.closeBtn;
-            const toTarget = val ? this.closeBtn : this.openBtn;
+            const timeline = gsap.timeline()
+            this.openBtn = this.refs().open
+            this.closeBtn = this.refs().close
+            const fromTarget = val ? this.openBtn : this.closeBtn
+            const toTarget = val ? this.closeBtn : this.openBtn
             timeline.to(fromTarget, { opacity: 0, rotationX: 90, duration: 0.5}, "hidden")
-                .to(toTarget, { opacity: 1, rotationX: 0, duration: 0.5 }, "show");
+                .to(toTarget, { opacity: 1, rotationX: 0, duration: 0.5 }, "show")
         }
     },
     methods: {
         refs(): any {
-            return this.$refs;
+            return this.$refs
         }
     }
 })

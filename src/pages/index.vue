@@ -93,8 +93,8 @@ export default({
         }
     },
     async asyncData({ $microcms }) {
-        const { contents } = await $microcms.get({ endpoint: 'news' });
-        return { items: contents };
+        const { contents } = await $microcms.get({ endpoint: 'news' })
+        return { items: contents }
     }
 })
 </script>

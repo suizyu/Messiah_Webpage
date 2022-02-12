@@ -20,21 +20,21 @@ export default Vue.extend({
     computed: {
         GetIcon() {
             if (this.iconName == 'line') {
-                return faLine;
+                return faLine
             } else if (this.iconName == 'twitter') {
-                return faTwitter;
+                return faTwitter
             } else if (this.iconName == 'facebook') {
-                return faFacebookSquare;
+                return faFacebookSquare
             }
         },
         iconColor() {
             let colorCode = "rgba(32, 32, 32)";
             if (this.iconName == 'line') {
-                colorCode = "#06c755";
+                colorCode = "#06c755"
             } else if (this.iconName == 'twitter') {
-                colorCode = "#1DA1F2";
+                colorCode = "#1DA1F2"
             } else if (this.iconName == 'facebook') {
-                colorCode = "#1877f2";
+                colorCode = "#1877f2"
             }
             return { '--icolor' : colorCode }
         }

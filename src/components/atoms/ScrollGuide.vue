@@ -27,7 +27,7 @@ export default Vue.extend({
         display: inline-block;
         position: absolute;
         right: 6%;
-        bottom: 0vh;
+        bottom: 0;
         height: 38vh;
         z-index: 3;
     }

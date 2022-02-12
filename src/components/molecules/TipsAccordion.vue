@@ -35,20 +35,20 @@ export default Vue.extend({
         }
     },
     mounted() {
-        const root = this.$el;
-        root.setAttribute('sub-title', this.subTitle);
+        const root = this.$el
+        root.setAttribute('sub-title', this.subTitle)
     },
     methods: {
         refs(): any{
-            return this.$refs;
+            return this.$refs
         },
         stateChange() {
-            this.isOpen = !this.isOpen;
-            const target = this.refs().tips;
+            this.isOpen = !this.isOpen
+            const target = this.refs().tips
             if (this.isOpen) {
-                gsap.to(target, { height: 'auto', duration: 0.5 });
+                gsap.to(target, { height: 'auto', duration: 0.5 })
             } else {
-                gsap.to(target, { height: '95px', duration: 0.5 });
+                gsap.to(target, { height: '95px', duration: 0.5 })
             }
         }
     }
