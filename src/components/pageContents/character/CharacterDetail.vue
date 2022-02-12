@@ -127,7 +127,7 @@ export default Vue.extend({
     @media (max-width: 960px) {
         .label {
             width: 100vw;
-            bottom: 30%;
+            bottom: 38%;
         }
         .decorate {
             height: 30vh;
