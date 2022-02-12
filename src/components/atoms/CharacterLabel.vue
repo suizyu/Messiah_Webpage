@@ -59,7 +59,7 @@ export default Vue.extend({
     }
     .name {
         font-size: 2.5rem;
-        font-family: kinuta-maruminshinano-stdn, serif;
+        font-family: kinuta-maruminshinano-stdn, sans-serif, serif;
         font-feature-settings: "palt";
     }
     .spelling {

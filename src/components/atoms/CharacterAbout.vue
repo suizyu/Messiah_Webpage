@@ -64,7 +64,7 @@ export default Vue.extend({
     }
     .name {
         bottom: 75%;
-        font-family: kinuta-maruminshinano-stdn, serif;
+        font-family: kinuta-maruminshinano-stdn, sans-serif, serif;
         font-feature-settings: "palt";
         z-index: 1;
     }

@@ -87,7 +87,7 @@ export default Vue.extend({
         color: #000;
         font-size: 2.5rem;
         text-align: center;
-        font-family: kinuta-maruminshinano-stdn, serif;
+        font-family: kinuta-maruminshinano-stdn, sans-serif, serif;
     }
     .summary-row:hover {
         cursor: pointer;

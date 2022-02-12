@@ -15,7 +15,7 @@ export default Vue.extend({
         top: 1px;
         color: white;
         font-size: 0.7rem;
-        font-family: kinuta-maruminshinano-stdn, serif;
+        font-family: kinuta-maruminshinano-stdn, sans-serif, serif;
         font-weight: 400;
         font-style: normal;
         letter-spacing: 0.05rem;

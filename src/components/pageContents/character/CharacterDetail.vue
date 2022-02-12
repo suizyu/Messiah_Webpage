@@ -116,7 +116,7 @@ export default Vue.extend({
     }
     .quote-box p {
         font-size: 2rem;
-        font-family: kinuta-maruminshinano-stdn, Helvetica, sans-serif;
+        font-family: kinuta-maruminshinano-stdn, sans-serif, serif;
         text-shadow: 0 3px 10px #333;
         text-align: left;
     }
