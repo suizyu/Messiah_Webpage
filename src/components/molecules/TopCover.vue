@@ -16,18 +16,26 @@ export default Vue.extend({
     },
     data() {
       return {
-        innerHeight: ""
+        innerHeight: "",
+        lastInnerHeight: 0
       }
     },
     mounted() {
       this.$nextTick(() => {
-        this.setInnerHeight()
+        window.addEventListener('resize', this.resizeEvent)
+        this.resizeEvent()
       })
     },
     methods: {
-      setInnerHeight(): void {
-        this.innerHeight = window.innerHeight + "px"
+      resizeEvent(): void {
+        if (this.lastInnerHeight != window.innerHeight) {
+          this.lastInnerHeight = window.innerHeight
+          this.innerHeight = window.innerHeight + "px"
+        }
       }
+    },
+    destroyed() {
+      window.removeEventListener('resize', this.resizeEvent)
     }
 })
 </script>
