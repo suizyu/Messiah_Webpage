@@ -21,17 +21,13 @@ export default Vue.extend({
     },
     mounted() {
       this.$nextTick(() => {
-        window.addEventListener('resize', this.resizeEvent)
-        this.resizeEvent()
+        this.setInnerHeight()
       })
     },
     methods: {
-      resizeEvent(): void {
+      setInnerHeight(): void {
         this.innerHeight = window.innerHeight + "px"
       }
-    },
-    destroyed() {
-      window.removeEventListener('resize', this.resizeEvent)
     }
 })
 </script>
