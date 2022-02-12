@@ -145,7 +145,6 @@ export default Vue.extend({
         }
         .menu-item {
             padding-left: 20px;
-            padding-bottom: 15px;
         }
         nav {
             display: flex;
