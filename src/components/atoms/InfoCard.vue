@@ -54,7 +54,7 @@ export default Vue.extend({
         display: block;
         text-decoration: none;
         margin: 0 auto;
-        width: 300px;
+        max-width: 300px;
         transition:0.5s all;
     }
     .card p, .date {
