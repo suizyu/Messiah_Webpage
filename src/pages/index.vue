@@ -28,11 +28,11 @@
                     <div class="buttle-discription">
                         <h3>砂漠の天候を見極めろ！</h3>
                         <p>
-                            <span>砂漠の天候は千変万化！</span><br>
-                            <span>戦闘を有利にも不利にも導きます。</span><br>
+                            <span>砂漠の</span><span>天候は</span><span>千変万化！</span><br>
+                            <span>戦闘を</span><span>有利にも</span><span>不利にも</span><span>導きます。</span><br>
                             <br>
-                            <span>天候を支配、あるいは適応するかはあなた次第。</span><br>
-                            <span>敵だけではない対峙と選択で戦略を組もう!</span><br>
+                            <span>天候を</span><span>支配、</span><span>あるいは</span><span>適応するかは</span><span>あなた次第。</span><br>
+                            <span>敵だけ</span><span>ではない</span><span>対峙と</span><span>選択で</span><span>戦略を</span><span>組もう!</span><br>
                             <br>
                         </p>
                     </div>

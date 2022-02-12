@@ -1,6 +1,6 @@
 <template>
     <figure class="character-about">
-            <img :src="imagePath()" 
+            <img :src="imagePath()"
                 :alt="this.name"
                 class="character" />
             <figcaption>
@@ -49,7 +49,6 @@ export default Vue.extend({
         position: absolute;
         width: 85vw;
         max-width: 750px;
-        top:50%;
         left: 50%;
         transform: translateX(-50%);
         text-shadow: 3px 2px 3px #333;
@@ -60,25 +59,41 @@ export default Vue.extend({
     .character img {
         display: block;
         height: 60vh;
-        object-fit: cover; 
+        object-fit: cover;
     }
     .name {
-        bottom: 75%;
         font-family: kinuta-maruminshinano-stdn, sans-serif, serif;
         font-feature-settings: "palt";
         z-index: 1;
     }
-    .description {
-        font-size: 1.2rem;
+    @media (max-width: 400px) {
+        .name {
+            font-size: 2.5rem;
+        }
+        .character-about figcaption {
+            top:45%;
+        }
     }
-    @media (max-width: 960px) {
+    @media (min-width: 401px) and (max-width: 960px) {
         .name {
             font-size: 3rem;
+        }
+        .character-about figcaption {
+            top: 50%;
+        }
+        .description {
+            font-size: 1.2rem;
         }
     }
     @media (min-width: 961px) {
         .name {
             font-size: 3.25rem;
+        }
+        .character-about figcaption {
+            top: 50%;
+        }
+        .description {
+            font-size: 1.2rem;
         }
     }
 </style>
