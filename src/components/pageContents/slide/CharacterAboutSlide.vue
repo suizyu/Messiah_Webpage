@@ -69,7 +69,19 @@ export default Vue.extend({
     .slide-list >>> button.hooper-next {
         top: 45%;
         transform: scale(3);
+        mix-blend-mode: overlay;
+        transition: .5s;
         visibility: hidden;
+    }
+    .slide-list >>> button.hooper-prev:hover,
+    .slide-list >>> button.hooper-next:hover {
+        mix-blend-mode: normal;
+    }
+    .slide-list >>> button.hooper-prev.is-disabled,
+    .slide-list >>> button.hooper-next.is-disabled,
+    .slide-list >>> button.hooper-prev.is-disabled:hover,
+    .slide-list >>> button.hooper-next.is-disabled:hover {
+        mix-blend-mode: normal;
     }
     .slide-list >>> .hooper-indicator {
         width: 70px; 
