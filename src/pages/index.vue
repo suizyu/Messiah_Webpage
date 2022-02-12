@@ -28,11 +28,11 @@
                     <div class="buttle-discription">
                         <h3>砂漠の天候を見極めろ！</h3>
                         <p>
-                            砂漠の天候は千変万化！<br>
-                            戦闘を有利にも不利にも導きます。<br>
+                            <span>砂漠の天候は千変万化！</span><br>
+                            <span>戦闘を有利にも不利にも導きます。</span><br>
                             <br>
-                            天候を支配、あるいは適応するかはあなた次第。<br>
-                            敵だけではない対峙と選択で戦略を組もう!<br>
+                            <span>天候を支配、あるいは適応するかはあなた次第。</span><br>
+                            <span>敵だけではない対峙と選択で戦略を組もう!</span><br>
                             <br>
                         </p>
                     </div>
@@ -116,9 +116,24 @@ export default({
         font-size: 2rem;
     }
     .battle h3 {
-        font-family: kinuta-maruminshinano-stdn, serif;
+        font-family: kinuta-maruminshinano-stdn, sans-serif, serif;
     }
     .battle p {
         font-size: 1.2rem;
+    }
+    .buttle-discription span {
+        position: relative;
+        display: inline-block;
+        z-index: 1;
+    }
+    .buttle-discription span::before {
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        left: -5px;
+        top: -5px;
+        right: -5px;
+        backdrop-filter: blur(5px);
+        z-index: -1;
     }
 </style>
