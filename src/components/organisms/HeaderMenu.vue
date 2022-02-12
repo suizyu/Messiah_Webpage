@@ -149,11 +149,12 @@ export default Vue.extend({
         nav {
             display: flex;
             align-items: center;
+            justify-content: center;
             flex-direction: column;
         }
         .logo {
-            max-height: 17vh;
-            margin:  5vh 0 5vh 0;
+            max-height: 15vh;
+            margin: 10px 0;
         }
     }
     @media (min-width: 961px) {
