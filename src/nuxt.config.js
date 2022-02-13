@@ -1,17 +1,24 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   target: 'static' ,
+  mode: 'universal',
   assetsDir: './',
   publicPath: './',
   head: {
     title: '最果てのメサイア 公式サイト',
     htmlAttrs: {
-      lang: 'ja'
+      lang: 'ja',
+      prefix: 'og: http://ogp.me/ns#'
     },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' }
+      { hid: 'description', name: 'description', content: '' },
+      { hid: 'og:site_name', property: 'og:site_name', content: '最果てのメサイア 公式サイト' },
+      { hid: 'og:type', property: 'og:type', content: 'website' },
+      { hid: 'og:description', property: 'og:description', content: '新作ストーリーRPG 最果てのメサイア 公式サイト。' },
+      { hid: 'og:url', property: 'og:url', content: 'https://focused-dijkstra-bd6b7b.netlify.app/' },
+      { hid: 'og:image', property: 'og:image', content: 'https://focused-dijkstra-bd6b7b.netlify.app/' + '_nuxt/img/logo.175fb92.png' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
