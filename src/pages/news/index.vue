@@ -3,9 +3,9 @@
         <CustomSection>
             <CustomH :level=1 :decorate=true>News</CustomH>
             <div class="all-news">
-                <div v-for="item in items" :key="item.id">
-                    <InfoCard v-bind="GetInfoItem(item)" class="news" />
-                </div>
+                <template v-for="item in items">
+                    <InfoCard v-bind="GetInfoItem(item)" class="news" :key="item.id" />
+                </template>
             </div>
         </CustomSection>
     </div>
@@ -78,17 +78,15 @@ export default ({
         }
     }
     @media (min-width: 961px) {
+        .all-news a {
+            width: 300px;
+        }
         .all-news {
             max-width: 1100px;
             margin: 20px auto;
             display: flex;
             flex-wrap: wrap;
-            justify-content:space-between;
-        }
-        .all-news::after {
-            content: "";
-            display: block;
-            width: 350px;
+            justify-content:center;
         }
         .neews {
             width: 30%;
