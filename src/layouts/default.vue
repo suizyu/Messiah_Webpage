@@ -48,6 +48,10 @@ export default Vue.extend({
     -webkit-font-smoothing: antialiased;
     box-sizing: border-box;
   }
+  html, 
+  body {
+    height: 100%;
+  }
   .container section {
     width: 100%;
     margin-bottom: 5vh;
@@ -65,11 +69,15 @@ export default Vue.extend({
   .container {
     overflow: hidden;
   }
+  body > .wrap {
+    height: auto;
+  }
   .wrap {
     margin: 0;
     padding: 0;
+    min-height: 100%;
   }
-  body::after {
+  .wrap::after {
     content: "";
     position: fixed;
     top: 0;
