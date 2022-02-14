@@ -68,10 +68,19 @@ export default Vue.extend({
   .wrap {
     margin: 0;
     padding: 0;
+  }
+  .wrap::after {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
     background: url(../assets/images/bg/french-stucco.png), linear-gradient(315deg, #1239a5, #2e0158);
     background-repeat: repeat;
     background-attachment: fixed;
     background-blend-mode: color-burn;
+    z-index: -1;
   }
   img {
       user-select: none;
