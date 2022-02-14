@@ -115,35 +115,43 @@ export default Vue.extend({
         z-index: 3;
     }
     .quote-box p {
-        font-size: 2rem;
         font-family: kinuta-maruminshinano-stdn, sans-serif, serif;
         text-shadow: 0 3px 10px #333;
         text-align: left;
     }
     .discription-box p {
         text-align: left;
-        font-size: 1.2rem;
     }
     @media (max-width: 960px) {
         .label {
             width: 100vw;
-            bottom: 38%;
+            bottom: 37%;
         }
         .decorate {
             height: 30vh;
+            min-height: 245px;
             right: 5%;
         }
         .sp-label-container {
             position: relative;
             width: 100vw;
             height: 30vh;
+            min-height: 260px;
         }
         .quote-box {
             margin-top: 5vh;
             margin-bottom: -7vh;
         }
+        .quote-box p {
+            font-size: 1.5rem;
+        }
         .discription-box {
             margin-top: -5vh;
+        }
+        .discription-box p {
+            text-align: left;
+            font-size: 1.2rem;
+            margin-top: -60px;
         }
     }
     @media (min-width: 961px) {
@@ -175,12 +183,18 @@ export default Vue.extend({
             width: 65%;
             height: 35vh;
         }
+        .quote-box p {
+            font-size: 2rem;
+        }
         .discription-box {
             position: absolute;
             left: 0;
             top: 45%;
             width: 55%;
             z-index: 5;
+        }
+        .discription-box p {
+            font-size: 1.5rem;
         }
     }
 </style>

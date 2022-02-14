@@ -35,7 +35,7 @@ export default Vue.extend({
     }
     .catchphrase {
         font-size: 2rem;
-        font-family: kinuta-maruminshinano-stdn, sans-serif, serif;
+        font-family: serif;
     }
     .story p,
     .story h3 {
