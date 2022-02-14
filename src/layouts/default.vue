@@ -69,7 +69,7 @@ export default Vue.extend({
     margin: 0;
     padding: 0;
   }
-  .wrap::after {
+  body::after {
     content: "";
     position: fixed;
     top: 0;
