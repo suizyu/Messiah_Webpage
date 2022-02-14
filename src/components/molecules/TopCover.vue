@@ -41,7 +41,7 @@ export default Vue.extend({
 </script>
 <style scoped>
   .top-cover {
-      --innerHeight: 100vh;
+      --innerHeight: 100%;
       position: relative;
       margin: 0;
       height: var(--innerHeight);
