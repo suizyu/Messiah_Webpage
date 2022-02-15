@@ -76,6 +76,7 @@ export default Vue.extend({
         -webkit-text-stroke: 3px rgba(97, 40, 7, 0.205);
         font-size: 8rem;
         pointer-events: none;
+        white-space: nowrap;
         z-index: -1;
     }
     .summary-row {
