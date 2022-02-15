@@ -48,8 +48,10 @@ export default Vue.extend({
     -webkit-font-smoothing: antialiased;
     box-sizing: border-box;
   }
-  html, 
+  html,
   body {
+    min-height: 100%;
+    height: auto !important;
     height: 100%;
   }
   .container section {
@@ -69,21 +71,18 @@ export default Vue.extend({
   .container {
     overflow: hidden;
   }
-  body > .wrap {
-    height: auto;
-  }
   .wrap {
     margin: 0;
     padding: 0;
-    min-height: 100%;
+    height: 100%;
   }
-  .wrap::after {
-    content: "";
+  .wrap::before {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    content: "";
     background: url(../assets/images/bg/french-stucco.png), linear-gradient(315deg, #1239a5, #2e0158);
     background-repeat: repeat;
     background-attachment: fixed;

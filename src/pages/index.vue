@@ -28,11 +28,11 @@
                     <div class="buttle-discription">
                         <h3>砂漠の天候を見極めろ！</h3>
                         <p>
-                            <span>砂漠の</span><span>天候は</span><span>千変万化！</span><br>
-                            <span>戦闘を</span><span>有利にも</span><span>不利にも</span><span>導きます。</span><br>
+                            砂漠の天候は千変万化！<br>
+                            戦闘を有利にも不利にも導きます。<br>
                             <br>
-                            <span>天候を</span><span>支配、</span><span>あるいは</span><span>適応するかは</span><span>あなた次第。</span><br>
-                            <span>敵だけ</span><span>ではない</span><span>対峙と</span><span>選択で</span><span>戦略を</span><span>組もう!</span><br>
+                            天候を支配、あるいは適応するかはあなた次第。<br>
+                            敵だけではない対峙と選択で戦略を組もう!<br>
                             <br>
                         </p>
                     </div>
@@ -99,6 +99,10 @@ export default({
 })
 </script>
 <style scoped>
+    .buttle-content {
+        padding: 10px;
+        backdrop-filter: blur(3px);
+    }
     .battle {
         background: linear-gradient(to right, rgba(198, 255, 221, 0.3), rgb(251, 215, 134, 0.3), rgb(247, 121, 125, 0.3)), url(../assets/images/bg/buttle01.png) center center no-repeat;
         background-size: cover;
@@ -120,20 +124,5 @@ export default({
     }
     .battle p {
         font-size: 1.2rem;
-    }
-    .buttle-discription span {
-        position: relative;
-        display: inline-block;
-        z-index: 1;
-    }
-    .buttle-discription span::before {
-        content: "";
-        position: absolute;
-        bottom: -5px;
-        left: -5px;
-        top: -5px;
-        right: -5px;
-        backdrop-filter: blur(5px);
-        z-index: -1;
     }
 </style>
