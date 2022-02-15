@@ -52,7 +52,6 @@ export default Vue.extend({
   body {
     min-height: 100%;
     height: auto !important;
-    height: 100%;
   }
   .container section {
     width: 100%;
@@ -74,15 +73,7 @@ export default Vue.extend({
   .wrap {
     margin: 0;
     padding: 0;
-    height: 100%;
-  }
-  .wrap::before {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    content: "";
+    height: auto;
     background: url(../assets/images/bg/french-stucco.png), linear-gradient(315deg, #1239a5, #2e0158);
     background-repeat: repeat;
     background-attachment: fixed;
