@@ -24,18 +24,19 @@ export default Vue.extend({
         writing-mode: vertical-rl;
     }
     .scroll-guide {
+        --guideHeight: 40vh;
         display: inline-block;
         position: absolute;
         right: 6%;
         bottom: 0;
-        height: 38vh;
+        height: var(--guideHeight);
         z-index: 3;
     }
     .scroll-guide::before {
         content: "";
         position: absolute;
         width: 1px;
-        height: 38vh;
+        height: var(--guideHeight);
         background: rgba(255, 255, 255, 0.281);
     }
     .scroll-guide::after {
@@ -43,7 +44,7 @@ export default Vue.extend({
         position: absolute;
         bottom: 0;
         width: 1px;
-        height: 38vh;
+        height: var(--guideHeight);
         background: white;
         animation: pathmove 2s cubic-bezier(1, 0, 0, 1) infinite;
     }

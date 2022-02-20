@@ -17,7 +17,7 @@ export default Vue.extend({
     data() {
       return {
         innerHeight: "",
-        lastInnerHeight: 0
+        lastInnerWidth: 0
       }
     },
     mounted() {
@@ -28,8 +28,8 @@ export default Vue.extend({
     },
     methods: {
       resizeEvent(): void {
-        if (this.lastInnerHeight != window.innerWidth) {
-          this.lastInnerHeight = window.innerWidth
+        if (this.lastInnerWidth != window.innerWidth) {
+          this.lastInnerWidth = window.innerWidth
           this.innerHeight = window.innerHeight + "px"
         }
       }
@@ -54,7 +54,7 @@ export default Vue.extend({
       display: flex;
       margin: 0;
       align-items: flex-end;
-      height: 95%;
+      height: 90%;
   }
   .top-info img {
     display: block;
