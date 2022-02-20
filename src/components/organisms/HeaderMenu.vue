@@ -133,10 +133,15 @@ export default Vue.extend({
         display: block;
     }
     @media (max-width: 960px) {
-        .menu-back {
-            height: 100%;
+        .menu-back::before {
+            content: "";
+            height: 100vh;
+            width: 100%;
+            display: block;
+            position: fixed;
             background: radial-gradient(rgba(37, 37, 37, 0.6), rgba(22, 22, 22, 0.95));
-            backface-visibility:hidden;
+            backface-visibility: hidden;
+            z-index: -1;
         }
         .menu-list li {
             text-align: left;
