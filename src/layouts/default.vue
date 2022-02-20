@@ -70,13 +70,20 @@ export default Vue.extend({
   .container {
     overflow: hidden;
   }
-  .wrap {
+  .wrap{
     margin: 0;
     padding: 0;
-    height: auto;
+  }
+  .wrap::before {
+    content: "";
+    display: block;
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    left: 0;
     background: url(../assets/images/bg/french-stucco.png), linear-gradient(315deg, #1239a5, #2e0158);
     background-repeat: repeat;
-    background-attachment: fixed;
     background-blend-mode: color-burn;
     z-index: -1;
   }
