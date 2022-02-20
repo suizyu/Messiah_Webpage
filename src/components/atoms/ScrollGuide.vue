@@ -24,7 +24,7 @@ export default Vue.extend({
         writing-mode: vertical-rl;
     }
     .scroll-guide {
-        --guideHeight: 40vh;
+        --guideHeight: 38vh;
         display: inline-block;
         position: absolute;
         right: 6%;
