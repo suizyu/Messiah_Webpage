@@ -82,9 +82,20 @@ export default Vue.extend({
     width: 100%;
     top: 0;
     left: 0;
-    background: url(../assets/images/bg/french-stucco.png), linear-gradient(315deg, #1239a5, #2e0158);
+    background: linear-gradient(315deg, #1239a5, #2e0158);
+    z-index: -1;
+  }
+  .wrap::after {
+    content: "";
+    display: block;
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: url(../assets/images/bg/french-stucco.png);
     background-repeat: repeat;
-    background-blend-mode: color-burn;
+    mix-blend-mode: color-burn;
     z-index: -1;
   }
   img {
