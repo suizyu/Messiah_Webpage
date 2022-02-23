@@ -80,15 +80,12 @@ export default Vue.extend({
     position: fixed;
     height: 100vh;
     width: 100%;
+    min-height: 100vh;
     top: 0;
     left: 0;
     background: url(../assets/images/bg/french-stucco.png), linear-gradient(315deg, #1239a5, #2e0158);
     background-blend-mode: color-burn;
     z-index: -1;
-  }
-  _::-webkit-full-page-media, _:future, :root .wrap {
-    margin: 0;
-    padding: 0;
   }
   _::-webkit-full-page-media, _:future, :root .wrap::before {
     content: "";
@@ -96,6 +93,7 @@ export default Vue.extend({
     position: fixed;
     height: 100vh;
     width: 100%;
+    min-height: 100vh;
     top: 0;
     left: 0;
     background: linear-gradient(315deg, #1239a5, #2e0158);
