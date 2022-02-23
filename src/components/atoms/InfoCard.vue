@@ -68,7 +68,7 @@ export default Vue.extend({
         height: 125px;
         position: relative;
         overflow: hidden;
-        background-image: url(../../assets/images/contents/news/newsBg.png);
+        background-image: url(../../assets/images/contents/news/newsBg.jpg);
         background-size: cover;
     }
     .thumbnailImg {

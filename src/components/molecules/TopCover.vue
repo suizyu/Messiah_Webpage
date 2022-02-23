@@ -46,7 +46,7 @@ export default Vue.extend({
       margin: 0;
       height: var(--innerHeight);
       widows: 100%;
-      background: url(../../assets/images/bg/sky01.png) center center no-repeat;
+      background: url(../../assets/images/bg/sky01.jpg) center center no-repeat;
       background-size: cover;
       z-index: 1;
   }

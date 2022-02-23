@@ -104,7 +104,7 @@ export default({
         backdrop-filter: blur(3px);
     }
     .battle {
-        background: linear-gradient(to right, rgba(198, 255, 221, 0.3), rgb(251, 215, 134, 0.3), rgb(247, 121, 125, 0.3)), url(../assets/images/bg/buttle01.png) center center no-repeat;
+        background: linear-gradient(to right, rgba(198, 255, 221, 0.3), rgb(251, 215, 134, 0.3), rgb(247, 121, 125, 0.3)), url(../assets/images/bg/buttle01.jpg) center center no-repeat;
         background-size: cover;
         margin-top: 2vh;
     }
