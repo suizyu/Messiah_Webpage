@@ -10,7 +10,7 @@ export default Vue.extend({
 </script>
 <style scoped>
     .custom-section {
-        margin: 8vh 0;
+        margin-bottom: 5vh;
         width: 100%;
     }
 </style>

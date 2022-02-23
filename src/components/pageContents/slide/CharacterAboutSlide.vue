@@ -51,10 +51,10 @@ export default Vue.extend({
     }
     .slide-list {
         height: 100%;
-        width: 100vw;
+        width:100%;
     }
     .slide-item {
-        width: 100vw;
+        width: 100%;
     }
     .slide-list >>> .hooper-navigation {
         fill: #fff;
