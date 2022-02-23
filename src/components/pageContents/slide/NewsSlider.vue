@@ -91,11 +91,6 @@ export default Vue.extend({
         margin: 0 auto;
         width: 80vw;
         max-width: 1600px;
-        -webkit-tap-highlight-color:rgba(0,0,0,0);
-        cursor:pointer;
-    }
-    .news-slider:focus {
-        outline: none;
     }
     .slide {
         height: 200px;

@@ -48,11 +48,6 @@ export default Vue.extend({
         height: 60vh;
         margin: 5vh auto;
         overflow: visible;
-        -webkit-tap-highlight-color:rgba(0,0,0,0);
-        cursor:pointer;
-    }
-    .character-about-slide:focus {
-        outline: none;
     }
     .slide-list {
         height: 100%;

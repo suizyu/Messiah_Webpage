@@ -80,7 +80,6 @@ export default Vue.extend({
     position: fixed;
     height: 100vh;
     width: 100%;
-    min-height: 100vh;
     top: 0;
     left: 0;
     background: url(../assets/images/bg/french-stucco.png), linear-gradient(315deg, #1239a5, #2e0158);
@@ -93,10 +92,10 @@ export default Vue.extend({
     position: fixed;
     height: 100vh;
     width: 100%;
-    min-height: 100vh;
     top: 0;
     left: 0;
     background: linear-gradient(315deg, #1239a5, #2e0158);
+    transform: translate3d(0,0,0); 
     z-index: -1;
   }
   img {
