@@ -87,7 +87,15 @@ export default Vue.extend({
     z-index: -1;
   }
   _::-webkit-full-page-media, _:future, :root .wrap::before {
+    content: "";
+    display: block;
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    left: 0;
     background: linear-gradient(315deg, #1239a5, #2e0158);
+    z-index: -1;
 }
   img {
       user-select: none;
