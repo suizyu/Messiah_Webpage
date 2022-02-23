@@ -86,6 +86,10 @@ export default Vue.extend({
     background-blend-mode: color-burn;
     z-index: -1;
   }
+  _::-webkit-full-page-media, _:future, :root .wrap {
+    margin: 0;
+    padding: 0;
+  }
   _::-webkit-full-page-media, _:future, :root .wrap::before {
     content: "";
     display: block;
@@ -96,7 +100,7 @@ export default Vue.extend({
     left: 0;
     background: linear-gradient(315deg, #1239a5, #2e0158);
     z-index: -1;
-}
+  }
   img {
       user-select: none;
   }
