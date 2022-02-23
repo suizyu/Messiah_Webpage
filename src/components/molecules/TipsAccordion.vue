@@ -103,7 +103,7 @@ export default Vue.extend({
         position: relative;
         margin: 0 auto;
         padding: 15px 0;
-        width: 70vw;
+        width: 85vw;
         max-width: 750px;
         color: #000;
         font-size: 1.2rem;
