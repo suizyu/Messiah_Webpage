@@ -73,22 +73,19 @@ export default Vue.extend({
   .wrap{
     margin: 0;
     padding: 0;
-    height: auto;
-    background: url(../assets/images/bg/french-stucco.png), linear-gradient(315deg, #1239a5, #2e0158);
-    background-repeat: repeat, no-repeat;
-    background-blend-mode: color-burn;
   }
-  /* .wrap::before {
+  .wrap::before {
     content: "";
     display: block;
     position: fixed;
     height: 100vh;
     width: 100%;
     top: 0;
-    left: 0; 
-    background: linear-gradient(315deg, #1239a5, #2e0158);
+    left: 0;
+    background: url(../assets/images/bg/french-stucco.png), linear-gradient(315deg, #1239a5, #2e0158);
+    background-blend-mode: color-burn;
     z-index: -1;
-  } */
+  }
   img {
       user-select: none;
   }
