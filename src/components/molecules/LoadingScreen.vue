@@ -18,7 +18,7 @@ export default Vue.extend({
 <style scoped>
     .screen,
     .screen-container {
-        width: 100%;
+        width: 100vw;
         height: 100vh;
         margin: 0;
     }

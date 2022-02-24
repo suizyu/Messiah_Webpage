@@ -124,7 +124,7 @@ export default Vue.extend({
     }
     @media (max-width: 960px) {
         .label {
-            width: 100%;
+            width: 100vw;
             bottom: 37%;
         }
         .decorate {
@@ -134,7 +134,7 @@ export default Vue.extend({
         }
         .sp-label-container {
             position: relative;
-            width: 100%;
+            width: 100vw;
             height: 30vh;
             min-height: 260px;
         }

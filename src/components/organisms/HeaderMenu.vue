@@ -102,23 +102,23 @@ export default Vue.extend({
 </script>
 <style scoped>
     header {
-        position: sticky;
+        position: fixed;
         top: 0;
         left: 0;
-        width: 100%;
+        width: 100vw;
         max-height: 10vh;
         margin: 0;
         z-index: 10;
     }
     .menu-back {
-        position: sticky;
+        position: fixed;
         top: 0;
         left: 100%;
         width: 100%;
         perspective: 1000;
     }
     .menu-btn {
-        position: sticky;
+        position: fixed;
         top: 0;
         right: 0;
         margin: 17px;
