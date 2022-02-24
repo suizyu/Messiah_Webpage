@@ -4,7 +4,7 @@
       <LoadingScreen :isLoading="isLoading" />
       <HeaderMenu />
       <Nuxt class="contents" />
-      <Footer />
+      <Footer class="footer"/>
     </div>
   </transition>
 </template>
@@ -49,30 +49,19 @@ export default Vue.extend({
     box-sizing: border-box;
   }
   html,
-  body {
-    min-height: 100%;
+  body,
+  .wrap {
     height: auto !important;
-  }
-  .container section {
+    height: 100%;
     width: 100%;
-    margin-bottom: 5vh;
-  }
-  .container p,
-  .container dd,
-  .container dt {
-    font-family: serif;
-  }
-  .container p {
-    display: block;
-    margin: 0 auto;
-    font-family: serif;
-  }
-  .container {
-    overflow: hidden;
   }
   .wrap{
     margin: 0;
     padding: 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
   }
   .wrap::before {
     content: "";
@@ -103,6 +92,9 @@ export default Vue.extend({
   }
   .contents {
     color: #ededec;
+  }
+  .footer {
+    flex: auto;
   }
   .page-enter {
    opacity: 0;
