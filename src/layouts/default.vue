@@ -1,10 +1,12 @@
 <template>
   <transition name="page">
-    <div class="wrap">
-      <LoadingScreen :isLoading="isLoading" />
-      <HeaderMenu />
-      <Nuxt class="contents" />
-      <Footer class="footer"/>
+    <div class="flex-wrap">
+      <div class="wrap">
+        <LoadingScreen :isLoading="isLoading" />
+        <HeaderMenu />
+        <Nuxt class="contents" />
+        <Footer class="footer"/>
+      </div>
     </div>
   </transition>
 </template>
@@ -49,18 +51,22 @@ export default Vue.extend({
     box-sizing: border-box;
   }
   html,
-  body,
-  .wrap {
+  body {
     height: auto !important;
     height: 100%;
     width: 100%;
   }
+  .flex-wrap {
+    display: flex;
+    flex-direction: column;
+  }
   .wrap{
+    width: 100%;
+    min-height: 100vh;
     margin: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
     overflow: hidden;
   }
   .wrap::before {
