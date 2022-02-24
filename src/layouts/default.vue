@@ -58,10 +58,10 @@ export default Vue.extend({
   .wrap{
     margin: 0;
     padding: 0;
-    position: relative;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    overflow: hidden;
   }
   .wrap::before {
     content: "";
