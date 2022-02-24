@@ -84,7 +84,6 @@ export default Vue.extend({
     top: 0;
     left: 0;
     background: linear-gradient(315deg, #1239a5, #2e0158);
-    transform: translate3d(0,0,0); 
     z-index: -1;
   }
   img {
