@@ -16,26 +16,9 @@ export default Vue.extend({
     components: {
         CharacterListItem
     },
-    props: {
-        effect: {
-            type: Boolean,
-            required: false,
-            default: false
-        }
-    },
     data() {
         return {
             characters: characters
-        }
-    },
-    mounted() {
-        if (this.effect) {
-            this.Animation();
-        }
-    },
-    methods: {
-        Animation() {
-            console.log("demo");
         }
     }
 })

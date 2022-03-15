@@ -31,8 +31,6 @@ export default Vue.extend({
                 itemsToShow: 1,
                 wheelControl: false,
                 infiniteScroll: true,
-                autoPlay: true,
-                playSpeed: 5000
             }
         }
     },
@@ -47,16 +45,16 @@ export default Vue.extend({
 </script>
 <style scoped>
     .character-about-slide{
-        height: 70vh;
+        height: 60vh;
         margin: 5vh auto;
         overflow: visible;
     }
     .slide-list {
         height: 100%;
-        width: 100vw;
+        width: 100%;
     }
     .slide-item {
-        width: 100vw;
+        width: 100%;
     }
     .slide-list >>> .hooper-navigation {
         fill: #fff;
@@ -71,7 +69,19 @@ export default Vue.extend({
     .slide-list >>> button.hooper-next {
         top: 45%;
         transform: scale(3);
+        mix-blend-mode: overlay;
+        transition: .5s;
         visibility: hidden;
+    }
+    .slide-list >>> button.hooper-prev:hover,
+    .slide-list >>> button.hooper-next:hover {
+        mix-blend-mode: normal;
+    }
+    .slide-list >>> button.hooper-prev.is-disabled,
+    .slide-list >>> button.hooper-next.is-disabled,
+    .slide-list >>> button.hooper-prev.is-disabled:hover,
+    .slide-list >>> button.hooper-next.is-disabled:hover {
+        mix-blend-mode: normal;
     }
     .slide-list >>> .hooper-indicator {
         width: 70px; 

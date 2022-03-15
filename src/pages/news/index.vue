@@ -3,9 +3,9 @@
         <CustomSection>
             <CustomH :level=1 :decorate=true>News</CustomH>
             <div class="all-news">
-                <div v-for="item in items" :key="item.id">
-                    <InfoCard v-bind="GetInfoItem(item)" class="news" />
-                </div>
+                <template v-for="item in items">
+                    <InfoCard v-bind="GetInfoItem(item)" class="news" :key="item.id" />
+                </template>
             </div>
         </CustomSection>
     </div>
@@ -23,16 +23,19 @@ export default ({
         InfoCard
     },
     mounted() {
-        this.showInfoCard();
+        this.$nextTick(() => {
+            setTimeout(() => {
+                this.showInfoCard()
+            }, 800)
+        })
     },
     methods: {
         GetInfoItem(item) {
-            const publishDate = new Date(item.publishedAt);
-            const year = publishDate.getFullYear();
-            const month = ("00" + (publishDate.getMonth() + 1)).slice(-2);
-            const day = ("00" + (publishDate.getDate())).slice(-2);
-            const publishDateString = year + "/" + month + "/" + day;
-
+            const publishDate = new Date(item.publishedAt)
+            const year = publishDate.getFullYear()
+            const month = ("00" + (publishDate.getMonth() + 1)).slice(-2)
+            const day = ("00" + (publishDate.getDate())).slice(-2)
+            const publishDateString = year + "/" + month + "/" + day
             return {
                 imgName: item.thumbnail  || "logo_black.png",
                 date: publishDateString,
@@ -41,7 +44,7 @@ export default ({
             }
         },
         showInfoCard() {
-            let timeLine = gsap.timeline({});
+            let timeLine = gsap.timeline({})
             timeLine.to(".news", {
                 delay: 0.5,
                 duration: 1.25,
@@ -54,19 +57,15 @@ export default ({
             })
         }
     },
-    async asyncData({ $axios }) {
-        try {
-            const { contents } = await $axios.$get('/api/news');
-            return { items: contents };
-        }
-        catch(error) {
-            console.log(error);
-        }
+    async asyncData({ $microcms }) {
+        const { contents } = await $microcms.get({ endpoint: 'news'})
+        return { items: contents }
     }
 })
 </script>
 <style scoped>
     .all-news a {
+        display: block;
         margin: 25px;
     }
     .news {
@@ -75,22 +74,19 @@ export default ({
     }
     @media (max-width: 960px) {
         .all-news a {
-            display: block;
             margin : 30px auto;
         }
     }
     @media (min-width: 961px) {
+        .all-news a {
+            width: 300px;
+        }
         .all-news {
             max-width: 1100px;
             margin: 20px auto;
             display: flex;
             flex-wrap: wrap;
-            justify-content:space-between;
-        }
-        .all-news::after {
-            content: "";
-            display: block;
-            width: 350px;
+            justify-content:center;
         }
         .neews {
             width: 30%;

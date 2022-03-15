@@ -35,20 +35,20 @@ export default Vue.extend({
         }
     },
     mounted() {
-        const root = this.$el;
-        root.setAttribute('sub-title', this.subTitle);
+        const root = this.$el
+        root.setAttribute('sub-title', this.subTitle)
     },
     methods: {
         refs(): any{
-            return this.$refs;
+            return this.$refs
         },
         stateChange() {
-            this.isOpen = !this.isOpen;
-            const target = this.refs().tips;
+            this.isOpen = !this.isOpen
+            const target = this.refs().tips
             if (this.isOpen) {
-                gsap.to(target, { height: 'auto', duration: 0.5 });
+                gsap.to(target, { height: 'auto', duration: 0.5 })
             } else {
-                gsap.to(target, { height: '95px', duration: 0.5 });
+                gsap.to(target, { height: '95px', duration: 0.5 })
             }
         }
     }
@@ -73,9 +73,10 @@ export default Vue.extend({
         top: -10px;
         left: 5px;
         color: transparent;
-        -webkit-text-stroke: 3px rgba(71, 19, 19, 0.157);
+        -webkit-text-stroke: 3px rgba(97, 40, 7, 0.205);
         font-size: 8rem;
         pointer-events: none;
+        white-space: nowrap;
         z-index: -1;
     }
     .summary-row {
@@ -87,7 +88,7 @@ export default Vue.extend({
         color: #000;
         font-size: 2.5rem;
         text-align: center;
-        font-family: kinuta-maruminshinano-stdn, serif;
+        font-family: kinuta-maruminshinano-stdn, sans-serif, serif;
     }
     .summary-row:hover {
         cursor: pointer;
@@ -102,7 +103,7 @@ export default Vue.extend({
         position: relative;
         margin: 0 auto;
         padding: 15px 0;
-        width: 70vw;
+        width: 85vw;
         max-width: 750px;
         color: #000;
         font-size: 1.2rem;

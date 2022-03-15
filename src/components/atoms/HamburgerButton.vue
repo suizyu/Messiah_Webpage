@@ -1,8 +1,10 @@
 <template>
-    <div class="hmg-btn" @click="btnClick" :class="{active: isOpen}">
-        <span></span>
-        <span></span>
-        <span></span>
+    <div>
+        <div class="hmg-btn" @click="btnClick" :class="{active: isOpen}">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </div>
 </template>
 <script lang="ts">
@@ -18,16 +20,16 @@ export default Vue.extend({
     },
     methods: {
         btnStateChange() {
-            const isBtnOpen = this.isOpen;
-            this.$emit('btnStateChange', isBtnOpen);
+            const isBtnOpen = this.isOpen
+            this.$emit('btnStateChange', isBtnOpen)
         },
         btnClick() {
-            this.isOpen = !this.isOpen;
+            this.isOpen = !this.isOpen
         }
     },
     watch: {
         isOpen: function(val, oldVal) {
-            this.btnStateChange();
+            this.btnStateChange()
         }
     }
 })

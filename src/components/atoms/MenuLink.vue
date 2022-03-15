@@ -11,7 +11,7 @@ export default Vue.extend({
     props: ['name', 'link'],
     computed: {
         linkClass() {
-            return this.link ? 'menu-link' : 'disable-link';
+            return this.link ? 'menu-link' : 'disable-link'
         }
     }
 })

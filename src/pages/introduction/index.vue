@@ -30,14 +30,9 @@ export default({
       KeywordTips,
       Story
     },
-    async asyncData({ $axios }) {
-        try {
-            const { contents } = await $axios.$get('/api/keyword');
-            return { items: contents };
-        }
-        catch(error) {
-            console.log(error);
-        }
+    async asyncData({ $microcms }) {
+        const { contents } = await $microcms.get({ endpoint: 'keyword' })
+        return { items: contents }
     }
 })
 </script>

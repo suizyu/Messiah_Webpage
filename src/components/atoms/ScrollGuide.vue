@@ -15,7 +15,7 @@ export default Vue.extend({
         top: 1px;
         color: white;
         font-size: 0.7rem;
-        font-family: kinuta-maruminshinano-stdn, serif;
+        font-family: kinuta-maruminshinano-stdn, sans-serif, serif;
         font-weight: 400;
         font-style: normal;
         letter-spacing: 0.05rem;
@@ -24,18 +24,19 @@ export default Vue.extend({
         writing-mode: vertical-rl;
     }
     .scroll-guide {
+        --guideHeight: 38vh;
         display: inline-block;
         position: absolute;
         right: 6%;
-        bottom: 0vh;
-        height: 38vh;
+        bottom: 0;
+        height: var(--guideHeight);
         z-index: 3;
     }
     .scroll-guide::before {
-        content: '';
+        content: "";
         position: absolute;
         width: 1px;
-        height: 38vh;
+        height: var(--guideHeight);
         background: rgba(255, 255, 255, 0.281);
     }
     .scroll-guide::after {
@@ -43,7 +44,7 @@ export default Vue.extend({
         position: absolute;
         bottom: 0;
         width: 1px;
-        height: 38vh;
+        height: var(--guideHeight);
         background: white;
         animation: pathmove 2s cubic-bezier(1, 0, 0, 1) infinite;
     }

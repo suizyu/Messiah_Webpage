@@ -1,11 +1,13 @@
 <template>
-    <nuxt-link :to="linkTo" class="card" target="_self" :class="{ 'is-disabled': this.isLink }">
-        <div class="thumbnail">
-            <img :src="imgPath(imgName)" class="thumbnailImg">
-        </div>
-        <div class="info">
-            <span class="date">{{ date }}</span>
-            <p>{{ title }}</p>
+    <nuxt-link :to="linkTo" target="_self" :class="{ 'is-disabled': this.isLink }">
+        <div class="card">
+            <div class="thumbnail">
+                <img :src="imgPath(imgName)" class="thumbnailImg">
+            </div>
+            <div class="info">
+                <span class="date">{{ date }}</span>
+                <p>{{ title }}</p>
+            </div>
         </div>
     </nuxt-link>
 </template>
@@ -32,11 +34,11 @@ export default Vue.extend({
         }
     },
     mounted() {
-        this.isLink = this.linkTo ? true : false;
+        this.isLink = this.linkTo ? true : false
     },
     methods: {
         imgPath(name: string) {
-            return require("~/assets/images/" + name);
+            return require("~/assets/images/" + name)
         }
     }
 })
@@ -48,13 +50,11 @@ export default Vue.extend({
         height: 55px;
         text-align: left;
     }
-    a.card {
+    .card {
         display: block;
         text-decoration: none;
         margin: 0 auto;
-    }
-    .card {
-        width: 300px;
+        max-width: 300px;
         transition:0.5s all;
     }
     .card p, .date {
@@ -68,7 +68,7 @@ export default Vue.extend({
         height: 125px;
         position: relative;
         overflow: hidden;
-        background-image: url(../../assets/images/contents/news/newsBg.png);
+        background-image: url(../../assets/images/contents/news/newsBg.jpg);
         background-size: cover;
     }
     .thumbnailImg {
@@ -76,6 +76,9 @@ export default Vue.extend({
         height: 100%;
         bottom: 0;
         transition: all 0.5s;
+    }
+    .card:hover {
+        cursor: pointer;
     }
     .card:hover .thumbnailImg {
         transform: scale(1.25, 1.25);

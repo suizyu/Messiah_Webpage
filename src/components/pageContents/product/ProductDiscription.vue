@@ -50,7 +50,6 @@ export default Vue.extend({
         width: 50vw;
         font-size: 1.75rem;
         background: transparent;
-        color: #fff;
     }
     .discriptions > div {
         margin: 0 20px;

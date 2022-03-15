@@ -41,14 +41,13 @@ export default Vue.extend({
     .character-label {
         position: relative;
         width: 100%;
-        color: #fff;
         text-align: left;
         overflow: hidden;
     }
     .character-label hr {
-        border-width: 1px;
-        border-style: solid;
-        border-color: #fff;
+        border: none;
+        height: 1px;
+        background: linear-gradient(90deg, hsl(0, 0%, 100%), hsla(0, 0%, 100%, 0));
         margin: 0;
     }
     .name-block {
@@ -60,7 +59,7 @@ export default Vue.extend({
     }
     .name {
         font-size: 2.5rem;
-        font-family: kinuta-maruminshinano-stdn, serif;
+        font-family: kinuta-maruminshinano-stdn, sans-serif, serif;
         font-feature-settings: "palt";
     }
     .spelling {
